@@ -71,8 +71,8 @@ body {
 }
 
 [data-theme="dark"] .card {
-    background-color: var(--slate-700);
-    border-color: var(--slate-700);
+    background-color: var(--slate-500);
+    border-color: var(--slate-500);
 }
 
 [data-theme="dark"] .navbar-toggler {
@@ -388,30 +388,6 @@ a {
     cursor: default;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* White navbar with blue text */
 #site-navbar {
     background-color: #fff !important;
@@ -468,20 +444,6 @@ a {
     padding-top: .25rem;
     padding-bottom: .25rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 991.98px) {
     .navbar-collapse.collapse:not(.show) {
@@ -622,4 +584,21 @@ a {
     background-color: #fd7e14;
     /* amber orange */
     color: #fff;
+}
+
+[data-theme="light"] .bg-light-blue {
+    background-color: #f4f6fb;
+    /* only applied in dark theme */
+}
+
+[data-theme="light"] .bg-very-light-blue {
+    background-color: #f8f8fa;
+    /* only applied in dark theme */
+}
+
+h2.about-heading {
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--blue-500), var(--blue-300));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

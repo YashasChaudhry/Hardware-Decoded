@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Assemble Your First PC – What You Need to Know | Hardware Decoded</title>
+    <meta name="description"
+        content="Clear guides and timely news on CPUs, GPUs, motherboards, memory, storage, power, cooling, and cases. Understand PC parts, buy smart, build confident.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="PC Components, Explained | Hardware Decoded">
+    <meta property="og:description"
+        content="Clear guides and timely news on CPUs, GPUs, motherboards, memory, storage, power, cooling, and cases.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hardwaredecoded.com/how-to-assemble-your-first-pc">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hardware Decoded - PC Components, Explained">
+    <meta name="twitter:description"
+        content="Clear guides and timely news on CPUs, GPUs, motherboards, memory, storage, power, cooling, and cases.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="posts.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top nav-animated" id="site-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-primary" href="index.html">
+                <img src="logo.jpg" alt="Hardware Decoded Logo" width="48" height="48" class="me-2">
+                <span class="fw-bold">Hardware Decoded</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Blue outline button -->
+                <button class="btn btn-outline-primary btn-sm button-hover" id="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hl-article-section hl-article-hero">
+        <img src="images/assemble-hero.webp" alt="Parts and tools laid out on a desk before PC assembly">
+        <h1>How to Assemble Your First PC — Step by Step</h1>
+        <p>
+            A beginner-friendly build guide covering the exact order of installation, safe handling tips, static
+            protection,
+            cable management basics, and first boot checks — so your first build is smooth and stress-free.
+        </p>
+    </header>
+
+    <!-- INTRO / SAFETY -->
+    <section class="hl-article-section hl-article-intro">
+        <p><strong>Before you start:</strong> Work on a clean, flat surface. Touch your metal case or PSU frame
+            periodically to discharge static.
+            Handle PCBs (motherboard, GPU, RAM) by the edges. Keep screws in a small tray or cup.</p>
+        <p><strong>Tools:</strong> #2 Phillips screwdriver, zip ties/Velcro straps, isopropyl wipes or microfiber,
+            thermal paste (if cooler isn’t pre-applied).</p>
+    </section>
+
+    <!-- PREP CHECKLIST -->
+    <section class="hl-article-section hl-article-checklist">
+        <h2>Pre-Build Checklist</h2>
+        <ul>
+            <li>Unbox and inspect all parts; check that standoffs, screws, cables, and brackets are included.</li>
+            <li>Download motherboard manual (PDF) to your phone for reference (front panel pins, M.2 slots, fan
+                headers).</li>
+            <li>Have your OS installer ready (USB for Windows/Linux) and any Wi-Fi/Ethernet access for drivers.</li>
+            <li>Plan airflow: front/bottom = intake, rear/top = exhaust. Aim for slight positive pressure.</li>
+        </ul>
+    </section>
+
+    <!-- MAIN BUILD FLOW -->
+    <section class="hl-article-section hl-article-components py-5">
+
+        <!-- Step 1 -->
+        <article class="hl-article-component">
+            <h2>Step 1 — CPU, RAM & NVMe on the Motherboard (Outside the Case)</h2>
+            <ul>
+                <li><strong>CPU:</strong> Open the socket latch, align triangle markers, place gently, lock lever.</li>
+                <li><strong>RAM:</strong> Use the recommended slots (often A2+B2). Press until latches click.</li>
+                <li><strong>NVMe SSD:</strong> Insert at an angle, press flat, screw down; apply M.2 heatsink if
+                    provided.</li>
+                <li><strong>Cooler backplate:</strong> If required, mount the backplate now (easier outside the case).
+                </li>
+            </ul>
+            <img src="images/step1-mobo.webp" alt="CPU, RAM, and NVMe installed on motherboard">
+        </article>
+
+        <!-- Step 2 -->
+        <article class="hl-article-component">
+            <h2>Step 2 — Case Prep & Standoffs</h2>
+            <ul>
+                <li>Remove both side panels. Install the I/O shield (if separate) into the case.</li>
+                <li>Check that motherboard <strong>standoffs</strong> match your board size (ATX/mATX/ITX). Move/add as
+                    needed.</li>
+                <li>Pre-install front intake and rear/top exhaust fans if the case doesn’t include them.</li>
+            </ul>
+            <img src="images/step2-case.webp" alt="PC case with standoffs and fans pre-installed">
+        </article>
+
+        <!-- Step 3 -->
+        <article class="hl-article-component">
+            <h2>Step 3 — Mount the Motherboard</h2>
+            <ul>
+                <li>Lower the board into the case, align with I/O shield and standoffs, then screw down in a cross
+                    pattern.</li>
+                <li>Connect front-panel cables later (power switch, reset, LEDs) — note the pin diagram in the manual.
+                </li>
+            </ul>
+            <img src="images/step3-mount-mobo.webp" alt="Motherboard being installed into the case">
+        </article>
+
+        <!-- Step 4 -->
+        <article class="hl-article-component">
+            <h2>Step 4 — Power Supply (PSU) & Main Cables</h2>
+            <ul>
+                <li>Install the PSU (fan facing case vent if applicable). Use the included screws.</li>
+                <li>Pre-route: 24-pin ATX, 8-pin (4+4) CPU EPS, PCIe/12VHPWR for GPU, SATA power for drives/fans.</li>
+                <li>Leave ~30% wattage headroom for future upgrades; avoid cable tension or sharp bends.</li>
+            </ul>
+            <img src="images/step4-psu.webp" alt="PSU installed with cables pre-routed">
+        </article>
+
+        <!-- Step 5 -->
+        <article class="hl-article-component">
+            <h2>Step 5 — CPU Cooler Installation</h2>
+            <ul>
+                <li>If your cooler has pre-applied paste, you’re set. Otherwise, apply a pea-sized dot of thermal paste.
+                </li>
+                <li>Mount the cooler evenly (tighten in a cross pattern). Plug the fan into <strong>CPU_FAN</strong>
+                    header.</li>
+                <li>For AIO: mount radiator (top or front), observe tube orientation, connect pump header
+                    (<strong>PUMP/AIO_PUMP</strong>).</li>
+            </ul>
+            <img src="images/step5-cooler.webp" alt="CPU cooler installed on CPU">
+        </article>
+
+        <!-- Step 6 -->
+        <article class="hl-article-component">
+            <h2>Step 6 — Storage & 2.5″/3.5″ Drives</h2>
+            <ul>
+                <li>Mount 2.5″ SSDs or 3.5″ HDDs in their trays/cages. Use short cables to reduce clutter.</li>
+                <li>Connect SATA data to motherboard and SATA power from PSU. NVMe needs no cables.</li>
+            </ul>
+            <img src="images/step6-storage.webp" alt="Installing 2.5 inch SSDs and HDDs">
+        </article>
+
+        <!-- Step 7 -->
+        <article class="hl-article-component">
+            <h2>Step 7 — Front-Panel, Fans & USB Headers</h2>
+            <ul>
+                <li>Connect front-panel: PWR SW, RESET, HDD/POWER LED (polarity matters on LEDs).</li>
+                <li>Front USB (3.0/3.2) and front audio headers; consult the manual for locations.</li>
+                <li>Case fans into <strong>SYS_FAN</strong> headers or hub; plan intake/exhaust direction.</li>
+            </ul>
+            <img src="images/step7-frontpanel.webp" alt="Front panel connectors and fan headers">
+        </article>
+
+        <!-- Step 8 -->
+        <article class="hl-article-component">
+            <h2>Step 8 — Install the GPU</h2>
+            <ul>
+                <li>Remove the correct PCIe slot covers, seat the GPU into the top x16 slot until it clicks.</li>
+                <li>Screw the bracket, connect PCIe/12VHPWR power firmly; avoid cable sag or stress.</li>
+                <li>Check clearance with side panel and front fans/radiator before closing the case.</li>
+            </ul>
+            <img src="images/step8-gpu.webp" alt="Graphics card seated in the PCIe x16 slot">
+        </article>
+
+    </section>
+
+    <!-- CABLE MANAGEMENT BASICS -->
+    <section class="hl-article-section hl-article-components">
+        <article class="hl-article-component">
+            <h2>Cable Management — Quick Wins</h2>
+            <ul>
+                <li>Route the thick 24-pin and EPS cables behind the motherboard tray; use the nearest grommets.</li>
+                <li>Bunch extra cable length in the PSU shroud area; secure with Velcro/zip ties.</li>
+                <li>Keep cables off fan paths and away from the CPU cooler area for better airflow.</li>
+                <li>Do a final tie-down after your first successful boot — you may re-route one or two cables.</li>
+            </ul>
+            <img src="images/cable-management.webp" alt="Neat cables tied behind the motherboard tray">
+        </article>
+    </section>
+
+    <!-- FIRST BOOT / BIOS -->
+    <section class="hl-article-section hl-article-components">
+        <article class="hl-article-component">
+            <h2>First Boot & Essential BIOS Settings</h2>
+            <ul>
+                <li>Connect monitor, keyboard, and power. Flip PSU switch on, press the case power button.</li>
+                <li>Enter BIOS/UEFI (usually <strong>Del</strong> or <strong>F2</strong>).</li>
+                <li><strong>Enable XMP/EXPO</strong> for RAM speed; set boot order to your OS USB.</li>
+                <li>Check CPU temps (idle), confirm storage detection (NVMe/SATA drives), and update BIOS if
+                    recommended.</li>
+                <li>Save & exit, install OS, then chipset/GPU/LAN/Wi-Fi drivers.</li>
+            </ul>
+            <img src="images/bios.webp" alt="BIOS screen showing memory profile and boot options">
+        </article>
+    </section>
+
+    <!-- TROUBLESHOOTING -->
+    <section class="hl-article-section hl-article-mistakes">
+        <h2>No Display or No Boot? Quick Fixes</h2>
+        <ul>
+            <li>Reseat RAM (try one stick in the recommended slot), check the 8-pin CPU power and 24-pin ATX.</li>
+            <li>Ensure GPU is fully clicked in and powered; try motherboard HDMI if using an iGPU.</li>
+            <li>Double-check front-panel power switch pins and the PSU rocker switch (I = on).</li>
+            <li>Clear CMOS (refer to manual) if settings seem stuck; try a bare-minimum boot (CPU+1 RAM+GPU).</li>
+        </ul>
+    </section>
+
+    <!-- POST-BUILD CHECKS -->
+    <section class="hl-article-section hl-article-components">
+        <article class="hl-article-component">
+            <h2>Post-Build Checks</h2>
+            <ul>
+                <li>Run Windows Update (or distro updates) and install the latest GPU drivers.</li>
+                <li>Set a basic fan curve in BIOS or vendor software for quieter operation.</li>
+                <li>Stress-test lightly (15–20 minutes) and watch temps: CPU under ~85°C, GPU under ~85°C for typical
+                    air cooling.</li>
+                <li>Back up your OS drive image once everything is stable.</li>
+            </ul>
+            <img src="images/post-build.webp" alt="System running with monitoring tools open">
+        </article>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="hl-article-section hl-article-summary">
+        <p>
+            <strong>In short:</strong> Build outside the case first (CPU, RAM, NVMe), prep the case, mount the board,
+            wire PSU and headers,
+            install the cooler, storage, and GPU, then tidy cables. Enable XMP/EXPO, set boot order, install drivers,
+            and check temps.
+            Simple, methodical steps = a smooth first-boot.
+        </p>
+    </section>
+
+    <!-- CTA: points back to the Buying Guide (previous post) -->
+    <section class="hl-article-section hl-article-cta">
+        <p>
+            Still choosing parts? Pair this guide with our value-focused picks by budget and use-case.
+        </p>
+        <a href="pc-buying-guide-2025.html" class="hl-article-btn">👉 Read the Buying Guide First</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="logo.jpg" alt="Hardware Decoded Logo" width="40" height="40" class="me-2">
+                        <h5 class="mb-0">Hardware Decoded</h5>
+                    </div>
+                    <p class="text-light opacity-75 mb-3">
+                        PC Components, Explained — With News That Matters
+                    </p>
+                    <p class="text-light opacity-75 small mb-0">
+                        hardwaredecoded@gmail.com
+                    </p>
+                </div>
+
+                <!-- Navigation (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Navigation</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../index.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Home</a></li>
+                                <li><a href="../blogs.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">All Blogs</a>
+                                </li>
+                                <li><a href="../about-us.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../contact.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Categories</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=cpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">CPUs</a></li>
+                                <li><a href="../blogs.html?filter=gpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">GPUs</a></li>
+                                <li><a href="../blogs.html?filter=motherboards"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Motherboards</a>
+                                </li>
+                                <li><a href="../blogs.html?filter=explainers"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Explainers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=storage-memory"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Storage &
+                                        Memory</a></li>
+                                <li><a href="../blogs.html?filter=power-cooling"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Power &
+                                        Cooling</a></li>
+                                <li><a href="../blogs.html?filter=cases"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Cases</a></li>
+                                <li><a href="../blogs.html?filter=news"
+                                        class="text-light opacity-75 text-decoration-none footer-link">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr class="my-4 opacity-25">
+
+            <!-- Bottom Footer -->
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0 text-light opacity-75 small">
+                        &copy; <span id="current-year"></span> Hardware Decoded. All rights reserved.
+                        | Developed by <strong class="text-white">Yashas Chaudhry</strong>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                    <div class="d-flex flex-wrap gap-3 justify-content-md-end justify-content-start">
+                        <a href="../privacy-policy.html" class="text-primary text-decoration-none small">Privacy
+                            Policy</a>
+                        <a href="../terms-of-service.html" class="text-primary text-decoration-none small">Terms of
+                            Service</a>
+                        <button class="btn btn-link btn-sm text-light opacity-75 p-0 back-to-top" id="back-to-top">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                                <path fill-rule="evenodd"
+                                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                            </svg>
+                            Back to Top
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Auto year
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

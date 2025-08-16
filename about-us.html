@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Hardware Decoded</title>
+    <meta name="description"
+        content="Learn about Yashas Chaudhry and Hardware Decoded's mission to make PC components accessible and understandable for everyone.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="About - Hardware Decoded">
+    <meta property="og:description"
+        content="Learn about Yashas Chaudhry and Hardware Decoded's mission to make PC components accessible and understandable for everyone.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hardwaredecoded.com/about-us">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Hardware Decoded">
+    <meta name="twitter:description"
+        content="Learn about Yashas Chaudhry and Hardware Decoded's mission to make PC components accessible and understandable for everyone.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Page-specific styles building on the main theme */
+        .page-hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 120px 0 80px;
+            margin-top: 26px;
+            /* Account for fixed navbar */
+        }
+
+        .page-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-hero .lead {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--blue-500);
+        }
+
+        .lead-text {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .content-text {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        /* Feature cards matching index.html style */
+        .feature-card {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border-color: var(--blue-300);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--blue-500), var(--blue-300));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .feature-card h5 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* Timeline styling */
+        .timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: var(--blue-500);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: calc(50% + 2rem);
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: calc(50% + 2rem);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            top: 1rem;
+            width: 20px;
+            height: 20px;
+            background: var(--blue-500);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid white;
+            box-shadow: 0 0 0 3px var(--border-light);
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            border: 1px solid var(--border-light);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .timeline-year {
+            color: var(--blue-500);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h5 {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-dark);
+        }
+
+        /* CTA Section matching index hero */
+        .cta-section {
+            background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .btn-cta {
+            background: white;
+            color: var(--blue-500);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 0 10px 10px 0;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            color: var(--blue-500);
+        }
+
+        .btn-secondary-cta {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 13px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 0 10px 10px 0;
+        }
+
+        .btn-secondary-cta:hover {
+            background: white;
+            color: var(--blue-500);
+            transform: translateY(-3px);
+        }
+
+        /* Author image styling */
+        .author-image {
+            width: 100%;
+            max-width: 400px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .page-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-item .timeline-content {
+                margin-left: 60px !important;
+                margin-right: 0 !important;
+                text-align: left !important;
+            }
+
+            .timeline-dot {
+                left: 30px;
+            }
+
+            .content-section {
+                padding: 60px 0;
+            }
+        }
+
+        /* Dark theme support */
+        [data-theme="dark"] .feature-card,
+        [data-theme="dark"] .timeline-content {
+            background: var(--bg-dark);
+            border-color: var(--border-dark);
+        }
+
+        [data-theme="dark"] .feature-card h5,
+        [data-theme="dark"] .timeline-content h5 {
+            color: var(--text-light);
+        }
+
+        [data-theme="dark"] .timeline-dot {
+            border-color: var(--bg-dark);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top nav-animated" id="site-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-primary" href="index.html">
+                <img src="logo.jpg" alt="Hardware Decoded Logo" width="48" height="48" class="me-2">
+                <span class="fw-bold">Hardware Decoded</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline active" href="about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Blue outline button -->
+                <button class="btn btn-outline-primary btn-sm button-hover" id="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container text-center">
+            <h1>About Hardware Decoded</h1>
+            <p class="lead">Demystifying PC hardware, one component at a time</p>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="section-subtitle">Hi, I'm Yashas Chaudhry</h2>
+                    <p class="lead-text">Welcome to Hardware Decoded – your gateway to understanding the fascinating
+                        world of PC components and hardware.</p>
+                    <p class="content-text">I created this blog because of my deep love for technology, computers, and
+                        hardware in general. When I started my journey into PC building, I couldn't find any blogs that
+                        focused solely on PC components – explaining how each part matters, how they work together, and
+                        most importantly, making it accessible for beginners.</p>
+                    <p class="content-text">It took me a long time to understand the importance of different PC parts
+                        when I first started. I want to make sure you don't have to go through that same struggle. My
+                        goal is simple: <strong>make it easy for people to understand the world of computer
+                            hardware.</strong></p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="PC Hardware Setup" class="author-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="content-section bg-light-subtle">
+        <div class="container">
+            <h2 class="section-title">My Mission</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="lead-text">To help beginners start their journey into custom PC building and hardware by
+                        providing clear, easy-to-understand content that breaks down complex concepts into digestible
+                        pieces.</p>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            💡
+                        </div>
+                        <h5>Simplify Complex Topics</h5>
+                        <p>I break down complicated hardware concepts into easy-to-understand explanations that anyone
+                            can follow, regardless of their technical background.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            👥
+                        </div>
+                        <h5>Focus on Beginners</h5>
+                        <p>Every article is written with newcomers in mind. I remember being confused when I started,
+                            and I don't want anyone else to feel that way.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            🖥️
+                        </div>
+                        <h5>PC Components Only</h5>
+                        <p>Unlike other tech blogs that cover everything, I focus exclusively on PC hardware – CPUs,
+                            GPUs, motherboards, RAM, storage, and more.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Journey Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">My Tech Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">7th Grade</div>
+                        <h5>The Spark Ignites</h5>
+                        <p>My interest in technology began in 7th grade when I started following Apple and Google events
+                            online. I was fascinated by how these companies pushed the boundaries of what technology
+                            could do.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">8th Grade</div>
+                        <h5>Discovering PC Building</h5>
+                        <p>In 8th grade, I stumbled upon the world of PC building and was immediately hooked. The idea
+                            that you could choose every component and build something truly custom was mind-blowing to
+                            me.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">The Dream</div>
+                        <h5>Blog Idea Born</h5>
+                        <p>I wanted to start this blog back then, but I didn't know how to make a website. The idea
+                            stayed with me through the years as I continued learning about hardware.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-year">Today</div>
+                        <h5>Dream Realized</h5>
+                        <p>Now, this blog is my way to stay connected to tech while helping others discover the amazing
+                            world of PC hardware. It's the realization of a dream years in the making.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You'll Find Section -->
+    <section class="content-section bg-light-subtle">
+        <div class="container">
+            <h2 class="section-title">What You'll Find Here</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead-text text-center">I keep my website design simple so it's easy for anyone to use and
+                        navigate. Here's what I cover:</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            📚
+                        </div>
+                        <h5>Component Explainers</h5>
+                        <p>Detailed guides that explain what each PC component does, why it matters, and how it affects
+                            your system's performance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            📰
+                        </div>
+                        <h5>News Summaries</h5>
+                        <p>The latest hardware news broken down into easy-to-understand summaries, so you stay updated
+                            without the technical jargon.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            📊
+                        </div>
+                        <h5>Component Comparisons</h5>
+                        <p>Side-by-side comparisons of different components to help you make informed decisions about
+                            what to buy for your build.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Start Your Hardware Journey?</h2>
+            <p class="lead mb-5">Join me in exploring the fascinating world of PC components. Read my articles, share
+                them with others, and help grow our community of hardware enthusiasts.</p>
+            <a href="blogs.html" class="btn-cta">
+                📖 Read My Articles
+            </a>
+            <a href="contact.html" class="btn-secondary-cta">
+                ✉️ Get in Touch
+            </a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5" id="newsletter">
+        <style>
+            #newsletter {
+                background: #f8f9fa;
+                border-top: 1px solid #e5e5e5;
+                border-bottom: 1px solid #e5e5e5;
+            }
+
+            #newsletter .nl-box {
+                background: #fff;
+                border: 1px solid #e5e5e5;
+                border-radius: 12px;
+                padding: 2rem;
+                position: relative;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            }
+
+            /* Coming Soon badge */
+            #newsletter .nl-box::before {
+                content: "Coming Soon";
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                background: #ff6b6b;
+                color: #fff;
+                font-size: 0.8rem;
+                font-weight: 600;
+                padding: 4px 10px;
+                border-radius: 999px;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            }
+
+            #newsletter h2 {
+                margin-bottom: 0.75rem;
+            }
+
+            #newsletter p {
+                color: #555;
+                margin-bottom: 1.5rem;
+            }
+
+            #newsletter .btn {
+                cursor: not-allowed;
+                opacity: 0.7;
+            }
+
+            #newsletter input {
+                background: #f1f1f1;
+                border: 1px solid #ddd;
+                cursor: not-allowed;
+            }
+        </style>
+
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="nl-box text-center">
+                        <h2>Stay Updated</h2>
+                        <p>Our newsletter is launching soon. Be the first to join our readers!</p>
+                        <form class="d-flex gap-2 justify-content-center">
+                            <input type="email" class="form-control" placeholder="Coming Soon..." disabled>
+                            <button class="btn btn-primary" type="button" disabled>Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="logo.jpg" alt="Hardware Decoded Logo" width="40" height="40" class="me-2">
+                        <h5 class="mb-0">Hardware Decoded</h5>
+                    </div>
+                    <p class="text-light opacity-75 mb-3">
+                        PC Components, Explained — With News That Matters
+                    </p>
+                    <p class="text-light opacity-75 small mb-0">
+                        hardwaredecoded@gmail.com
+                    </p>
+                </div>
+
+                <!-- Navigation (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Navigation</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="index.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Home</a></li>
+                                <li><a href="blogs.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">All Blogs</a>
+                                </li>
+                                <li><a href="about-us.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="contact.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Categories</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="blogs.html?filter=cpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">CPUs</a></li>
+                                <li><a href="blogs.html?filter=gpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">GPUs</a></li>
+                                <li><a href="blogs.html?filter=motherboards"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Motherboards</a>
+                                </li>
+                                <li><a href="blogs.html?filter=explainers"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Explainers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="blogs.html?filter=storage-memory"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Storage &
+                                        Memory</a></li>
+                                <li><a href="blogs.html?filter=power-cooling"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Power &
+                                        Cooling</a></li>
+                                <li><a href="blogs.html?filter=cases"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Cases</a></li>
+                                <li><a href="blogs.html?filter=news"
+                                        class="text-light opacity-75 text-decoration-none footer-link">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr class="my-4 opacity-25">
+
+            <!-- Bottom Footer -->
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0 text-light opacity-75 small">
+                        &copy; <span id="current-year"></span> Hardware Decoded. All rights reserved.
+                        | Developed by <strong class="text-white">Yashas Chaudhry</strong>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                    <div class="d-flex flex-wrap gap-3 justify-content-md-end justify-content-start">
+                        <a href="privacy-policy.html" class="text-primary text-decoration-none small">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="text-primary text-decoration-none small">Terms of
+                            Service</a>
+                        <button class="btn btn-link btn-sm text-light opacity-75 p-0 back-to-top" id="back-to-top">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                                <path fill-rule="evenodd"
+                                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                            </svg>
+                            Back to Top
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

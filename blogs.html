@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Hardware Decoded</title>
+    <meta name="description"
+        content="Browse all Hardware Decoded guides and news articles on CPUs, GPUs, motherboards, memory, storage, power, cooling, and cases.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Blogs | Hardware Decoded">
+    <meta property="og:description"
+        content="Browse all Hardware Decoded guides and news articles on PC hardware components.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hardwaredecoded.com/blogs">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blogs | Hardware Decoded">
+    <meta name="twitter:description"
+        content="Browse all Hardware Decoded guides and news articles on PC hardware components.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top nav-animated" id="site-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-primary" href="index.html">
+                <img src="Logo.jpg" alt="Hardware Decoded Logo" width="48" height="48" class="me-2">
+                <span class="fw-bold">Hardware Decoded</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline active" href="blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Blue outline button -->
+                <button class="btn btn-outline-primary btn-sm button-hover" id="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="py-5 bg-light-subtle">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-3">All Guides & News</h1>
+                    <p class="lead">Comprehensive coverage of PC hardware—from beginner guides to the latest industry
+                        news.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="py-4 border-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap gap-2" id="filter-buttons">
+                <button class="btn btn-outline-primary active" data-filter="all">All</button>
+                <button class="btn btn-outline-primary" data-filter="cpus">CPUs</button>
+                <button class="btn btn-outline-primary" data-filter="gpus">GPUs</button>
+                <button class="btn btn-outline-primary" data-filter="motherboards">Motherboards</button>
+                <button class="btn btn-outline-primary" data-filter="explainers">Explainers</button>
+                <button class="btn btn-outline-primary" data-filter="storage-memory">Storage & Memory</button>
+                <button class="btn btn-outline-primary" data-filter="power-cooling">Power & Cooling</button>
+                <button class="btn btn-outline-primary" data-filter="cases">Cases</button>
+                <button class="btn btn-outline-primary" data-filter="news">News</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Posts Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="posts-grid">
+                <!-- Post 1 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="cpus">
+                    <a href="blogs/cpu-cores-vs-threads.html" class="text-decoration-none">
+                        <div class="card h-100 blog-post-card">
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, var(--blue-500), var(--blue-300));"></div>
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">CPUs</span>
+                                <h5 class="card-title">CPU Cores vs Threads: What Actually Matters in 2025</h5>
+                                <p class="card-text text-muted">Understanding the real-world performance impact of cores
+                                    and threads for gaming and productivity tasks.</p>
+                                <small class="text-muted">July 25, 2025</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="explainers">
+                    <a href="blogs/beginners-guide-to-pc-parts.html" class="text-decoration-none">
+                        <div class="card h-100 blog-post-card">
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #17a2b8, #20c997);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-info mb-2">Explainers</span>
+                                <h5 class="card-title">A Beginner’s Guide to PC Parts – What You Need to Know</h5>
+                                <p class="card-text text-muted">Learn the role of each PC component — CPU, GPU, RAM,
+                                    storage, and more — explained in simple terms for first-time builders.</p>
+                                <small class="text-muted">August 8, 2025</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="gpus">
+                    <a href="blogs/gpu-real-value-under-30k.html" class="text-decoration-none">
+                        <div class="card h-100 blog-post-card">
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #28a745, #20c997);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">GPUs</span>
+                                <h5 class="card-title">GPU Naming Decoded: Finding Real Value Under ₹30K</h5>
+                                <p class="card-text text-muted">Cut through marketing names to find the best graphics
+                                    card for your budget and gaming needs.</p>
+                                <small class="text-muted">March 12, 2025</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="motherboards">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #ffc107, #fd7e14);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">Motherboards</span>
+                                <h5 class="card-title">B660 vs B760: Which Mid-Range Motherboard Wins?</h5>
+                                <p class="card-text text-muted">Feature comparison and value analysis for Intel's
+                                    popular mid-range chipsets in 2025.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="storage-memory">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #6c757d, #495057);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Storage & Memory</span>
+                                <h5 class="card-title">DDR5 vs DDR4: Is the Upgrade Worth It in 2025?</h5>
+                                <p class="card-text text-muted">Performance benchmarks and cost analysis to help you
+                                    decide on your next RAM upgrade.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="explainers">
+                    <a href="blogs/pc-buying-guide-2025.html" class="text-decoration-none">
+                        <div class="card h-100 blog-post-card">
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #17a2b8, #20c997);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-info mb-2">Explainers</span>
+                                <h5 class="card-title">The Ultimate PC Buying Guide: How to Choose the Right Parts in
+                                    2025</h5>
+                                <p class="card-text text-muted">From budget builds to high-end rigs, here’s how to pick
+                                    the
+                                    right parts for gaming, work, or content creation without overspending.</p>
+                                <small class="text-muted">August 13, 2025</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 7 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="power-cooling">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #dc3545, #fd7e14);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-danger mb-2">Power & Cooling</span>
+                                <h5 class="card-title">PSU Efficiency Ratings Explained: 80+ Bronze to Titanium</h5>
+                                <p class="card-text text-muted">Understanding power supply efficiency and how it affects
+                                    your electricity bill and system stability.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 8 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="explainers">
+                    <a href="blogs/how-to-assemble-your-first-pc.html" class="text-decoration-none">
+                        <div class="card h-100 blog-post-card">
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #17a2b8, #20c997);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-info mb-2">Explainers</span>
+                                <h5 class="card-title">How to Assemble Your First PC Step by Step</h5>
+                                <p class="card-text text-muted">A complete beginner-friendly build guide covering safe
+                                    installation, cable management, and first-boot checks.</p>
+                                <small class="text-muted">August 16, 2025</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 9 -->
+                <div class="col-lg-4 col-md-6 post-card" data-category="storage-memory">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #6c757d, #495057);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Storage & Memory</span>
+                                <h5 class="card-title">NVMe SSD Buying Guide: Speed vs Value in 2025</h5>
+                                <p class="card-text text-muted">Navigate the confusing world of NVMe drives to find the
+                                    perfect balance of performance and price.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Post 10 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="news">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, var(--blue-500), var(--blue-700));"></div>
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">News</span>
+                                <h5 class="card-title">Intel 15th Gen Processors: What We Know So Far</h5>
+                                <p class="card-text text-muted">Latest leaks and official announcements about Intel's
+                                    upcoming CPU generation.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 11 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="cases">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #343a40, #6c757d);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-dark mb-2">Cases</span>
+                                <h5 class="card-title">Airflow vs Aesthetics: Choosing the Right PC Case</h5>
+                                <p class="card-text text-muted">Balance thermal performance with visual appeal in your
+                                    next case selection.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Post 12 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="gpus">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #28a745, #17a2b8);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-success mb-2">GPUs</span>
+                                <h5 class="card-title">RTX 4060 vs RX 7600: Mid-Range GPU Showdown</h5>
+                                <p class="card-text text-muted">Comprehensive comparison of NVIDIA and AMD's latest
+                                    mid-range offerings for 1080p gaming.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 13 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="cpus">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, var(--blue-300), var(--blue-500));"></div>
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">CPUs</span>
+                                <h5 class="card-title">AMD vs Intel: Gaming Performance in 2025</h5>
+                                <p class="card-text text-muted">Head-to-head comparison of the latest processors from
+                                    both manufacturers for gaming workloads.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 14 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="storage-memory">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #6c757d, #495057);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Storage & Memory</span>
+                                <h5 class="card-title">RAM Speed Guide: 3200MHz vs 3600MHz vs 4000MHz</h5>
+                                <p class="card-text text-muted">Real-world performance testing across different memory
+                                    speeds and their impact on various applications.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 15 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="news">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, var(--blue-700), var(--blue-900));"></div>
+                            <div class="card-body">
+                                <span class="badge bg-primary mb-2">News</span>
+                                <h5 class="card-title">GPU Prices Continue to Drop: What This Means for Buyers</h5>
+                                <p class="card-text text-muted">Market analysis and predictions for graphics card
+                                    pricing trends in the coming months.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 16 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="storage-memory">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #6c757d, #495057);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-secondary mb-2">Storage & Memory</span>
+                                <h5 class="card-title">PCIe 4.0 vs 5.0 SSDs: Future-Proofing Your Storage</h5>
+                                <p class="card-text text-muted">Exploring the benefits and drawbacks of the latest
+                                    storage interface standards.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 17 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="motherboards">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #fd7e14, #ffc107);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-warning mb-2">Motherboards</span>
+                                <h5 class="card-title">Mini-ITX vs Micro-ATX: Small Form Factor Comparison</h5>
+                                <p class="card-text text-muted">Choosing the right motherboard size for compact builds
+                                    without sacrificing performance.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Post 18 -->
+                <div class="col-lg-4 col-md-6 post-card hidden" data-category="power-cooling">
+                    <a href="post.html" class="text-decoration-none disabled-link">
+                        <div class="card h-100 blog-post-card coming-soon-card">
+                            <div class="coming-soon-ribbon">Coming Soon</div>
+                            <div class="card-img-top post-image"
+                                style="background: linear-gradient(135deg, #dc3545, #6f42c1);"></div>
+                            <div class="card-body">
+                                <span class="badge bg-danger mb-2">Power & Cooling</span>
+                                <h5 class="card-title">AIO vs Air Cooling: Which is Right for Your CPU?</h5>
+                                <p class="card-text text-muted">Comprehensive comparison of liquid and air cooling
+                                    solutions for different use cases and budgets.</p>
+                                <small class="text-muted">Coming Soon</small>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-outline-primary btn-lg" id="load-more-btn">Load More Posts</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="logo.jpg" alt="Hardware Decoded Logo" width="40" height="40" class="me-2">
+                        <h5 class="mb-0">Hardware Decoded</h5>
+                    </div>
+                    <p class="text-light opacity-75 mb-3">
+                        PC Components, Explained — With News That Matters
+                    </p>
+                    <p class="text-light opacity-75 small mb-0">
+                        hardwaredecoded@gmail.com
+                    </p>
+                </div>
+
+                <!-- Navigation (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Navigation</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="index.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Home</a></li>
+                                <li><a href="blogs.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">All Blogs</a>
+                                </li>
+                                <li><a href="about-us.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="contact.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Categories</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="blogs.html?filter=cpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">CPUs</a></li>
+                                <li><a href="blogs.html?filter=gpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">GPUs</a></li>
+                                <li><a href="blogs.html?filter=motherboards"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Motherboards</a>
+                                </li>
+                                <li><a href="blogs.html?filter=explainers"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Explainers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="blogs.html?filter=storage-memory"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Storage &
+                                        Memory</a></li>
+                                <li><a href="blogs.html?filter=power-cooling"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Power &
+                                        Cooling</a></li>
+                                <li><a href="blogs.html?filter=cases"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Cases</a></li>
+                                <li><a href="blogs.html?filter=news"
+                                        class="text-light opacity-75 text-decoration-none footer-link">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr class="my-4 opacity-25">
+
+            <!-- Bottom Footer -->
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0 text-light opacity-75 small">
+                        &copy; <span id="current-year"></span> Hardware Decoded. All rights reserved.
+                        | Developed by <strong class="text-white">Yashas Chaudhry</strong>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                    <div class="d-flex flex-wrap gap-3 justify-content-md-end justify-content-start">
+                        <a href="privacy-policy.html" class="text-primary text-decoration-none small">Privacy Policy</a>
+                        <a href="terms-of-service.html" class="text-primary text-decoration-none small">Terms of
+                            Service</a>
+                        <button class="btn btn-link btn-sm text-light opacity-75 p-0 back-to-top" id="back-to-top">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                                <path fill-rule="evenodd"
+                                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                            </svg>
+                            Back to Top
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

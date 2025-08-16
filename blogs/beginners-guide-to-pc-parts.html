@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Beginner’s Guide to PC Parts – What You Need to Know | Hardware Decoded</title>
+    <meta name="description"
+        content="Clear guides and timely news on CPUs, GPUs, motherboards, memory, storage, power, cooling, and cases. Understand PC parts, buy smart, build confident.">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Hardware Decoded - PC Components, Explained">
+    <meta property="og:description"
+        content="Clear guides and timely news on CPUs, GPUs, motherboards, memory, storage, power, cooling, and cases.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hardwaredecoded.com/beginners-guide-to-pc-parts">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hardware Decoded - PC Components, Explained">
+    <meta name="twitter:description"
+        content="Clear guides and timely news on CPUs, GPUs, motherboards, memory, storage, power, cooling, and cases.">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="posts.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top nav-animated" id="site-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-primary" href="index.html">
+                <img src="logo.jpg" alt="Hardware Decoded Logo" width="48" height="48" class="me-2">
+                <span class="fw-bold">Hardware Decoded</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Blue outline button -->
+                <button class="btn btn-outline-primary btn-sm button-hover" id="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hl-article-section hl-article-hero">
+        <img src="images/pc-hero.webp" alt="Custom PC build illustration">
+        <h1>A Beginner’s Guide to PC Parts – What You Need to Know</h1>
+        <p>
+            Welcome to <strong>Hardware Decoded</strong> — your go-to place for learning about PC components and custom
+            PC building.
+            Whether you’re aiming for smooth schoolwork and light gaming or dreaming of a powerful rig, start here.
+        </p>
+    </header>
+
+    <!-- INTRO -->
+    <section class="hl-article-section hl-article-intro">
+        <p>
+            Building a PC looks complex because there are many parts and compatibility rules. This guide sticks to the
+            <em>must-know basics</em> so you can choose parts confidently and avoid common mistakes.
+        </p>
+    </section>
+
+    <!-- COMPONENTS -->
+    <section class="hl-article-section hl-article-components">
+
+        <article class="hl-article-component">
+            <h2>1) Motherboard — The Nervous System</h2>
+            <p>The board that connects <em>everything</em> and decides what’s compatible.</p>
+            <ul>
+                <li><strong>Socket</strong>: Must match your CPU (e.g., Intel LGA1700, AMD AM5).</li>
+                <li><strong>Chipset</strong>: Features/lanes (USB count, PCIe version, M.2 slots).</li>
+                <li><strong>Form factor</strong>: ATX (full features), mATX (balanced), mini-ITX (compact).</li>
+                <li><strong>VRM quality</strong>: Better power delivery helps CPU stability and temps.</li>
+                <li><strong>Memory support</strong>: DDR4 <em>or</em> DDR5 (not both on one board).</li>
+                <li><strong>M.2 slots</strong>: Check count and PCIe version for NVMe SSDs.</li>
+            </ul>
+            <p><strong>Quick tip:</strong> Check the board’s RAM QVL so your kit is known to work well.</p>
+            <img src="images/motherboard-closeup.webp" alt="Motherboard closeup">
+        </article>
+
+        <article class="hl-article-component">
+            <h2>2) CPU — The Brain</h2>
+            <p>Runs the instructions for everything you do. Choose based on your tasks and budget.</p>
+            <ul>
+                <li><strong>Cores/Threads</strong>: More helps with multitasking and content creation.</li>
+                <li><strong>Clock speed & boost</strong>: Affects snappiness; not the only metric.</li>
+                <li><strong>Architecture & efficiency</strong>: Newer gens deliver better per-core performance.</li>
+                <li><strong>iGPU</strong>: Handy if you skip a GPU initially (basic display output).</li>
+            </ul>
+            <p><strong>Quick tip:</strong> Pair the CPU tier with a matching GPU tier to avoid bottlenecks.</p>
+            <img src="images/cpu.webp" alt="CPU chip">
+        </article>
+
+        <article class="hl-article-component">
+            <h2>3) GPU — The Artist</h2>
+            <p>Renders game frames and accelerates creative apps. Biggest factor for gaming FPS.</p>
+            <ul>
+                <li><strong>VRAM</strong>: Higher resolutions/textures need more (e.g., 8–12GB for 1440p).</li>
+                <li><strong>Outputs</strong>: HDMI/DisplayPort count and versions for your monitor.</li>
+                <li><strong>Power</strong>: Check recommended PSU wattage and connector type.</li>
+                <li><strong>Size</strong>: Length/thickness must fit your case; watch 3-slot cards.</li>
+            </ul>
+            <p><strong>Quick tip:</strong> Match GPU to monitor: 1080p high-refresh needs midrange+; 4K benefits from
+                high-end.</p>
+            <img src="images/gpu.webp" alt="Graphics card">
+        </article>
+
+        <article class="hl-article-component">
+            <h2>4) RAM — Short-Term Memory</h2>
+            <p>Temporary workspace for active tasks. More RAM = smoother multitasking.</p>
+            <ul>
+                <li><strong>Capacity</strong>: 16GB is a sweet spot for gaming/general use; 32GB for heavy creation.
+                </li>
+                <li><strong>Speed & latency</strong>: Higher MHz and lower CL help (within budget).</li>
+                <li><strong>Dual-channel</strong>: Prefer 2×8GB or 2×16GB over a single stick.</li>
+                <li><strong>XMP/EXPO</strong>: Enable in BIOS to run your kit at rated speed.</li>
+            </ul>
+            <p><strong>Quick tip:</strong> Use the board’s recommended slots (often A2+B2) for stability.</p>
+            <img src="images/ram.webp" alt="RAM sticks">
+        </article>
+
+        <article class="hl-article-component">
+            <h2>5) Storage — Long-Term Memory</h2>
+            <p>Where your OS, apps, and files live.</p>
+            <ul>
+                <li><strong>NVMe SSD (M.2)</strong>: Very fast; ideal for OS, apps, and active games.</li>
+                <li><strong>SATA SSD</strong>: Slower than NVMe but still quick; great value.</li>
+                <li><strong>HDD</strong>: Cheapest bulk storage for media/archives.</li>
+                <li><strong>Capacity</strong>: Start with 1TB SSD if budget allows; add HDD later if needed.</li>
+                <li><strong>Heatsinks</strong>: NVMe drives can throttle; use the board’s M.2 shields if provided.</li>
+            </ul>
+            <p><strong>Quick tip:</strong> Keep OS + frequently used apps on NVMe; stash big files on HDD/SATA SSD.</p>
+            <img src="images/ssd.webp" alt="NVMe SSD">
+        </article>
+
+        <article class="hl-article-component">
+            <h2>6) PSU — The Heart</h2>
+            <p>Converts wall power for your components. A quality PSU protects your build.</p>
+            <ul>
+                <li><strong>Wattage</strong>: Add your parts’ draw and leave ~30% headroom.</li>
+                <li><strong>Efficiency</strong>: 80+ Bronze is entry; Gold+ runs cooler/quieter.</li>
+                <li><strong>Modularity</strong>: Modular/semi-modular = cleaner cable management.</li>
+                <li><strong>Connectors</strong>: Ensure the right PCIe/12VHPWR plugs for your GPU.</li>
+                <li><strong>Size</strong>: Standard ATX fits most; check shroud clearance.</li>
+            </ul>
+            <p><strong>Quick tip:</strong> Don’t overshoot massively—very high wattage can be inefficient at low loads.
+            </p>
+            <img src="images/psu.webp" alt="Power supply unit">
+        </article>
+
+        <article class="hl-article-component">
+            <h2>7) Case — The Home (and Airflow)</h2>
+            <p>Houses all parts and affects temps, noise, and looks.</p>
+            <ul>
+                <li><strong>Compatibility</strong>: GPU length, CPU cooler height, radiator support.</li>
+                <li><strong>Airflow basics</strong>: Front/bottom = intake; top/rear = exhaust.</li>
+                <li><strong>Pressure</strong>: Slight positive (more intake than exhaust) helps dust control.</li>
+                <li><strong>Filters</strong>: Removable dust filters ease cleaning.</li>
+                <li><strong>Front panel</strong>: Mesh fronts cool better than solid/glass.</li>
+            </ul>
+            <p><strong>Quick tip:</strong> Simple fan layout: 2× front intake + 1× rear exhaust. Add top exhaust if
+                temps are high.</p>
+            <img src="images/case.webp" alt="PC case">
+        </article>
+
+    </section>
+
+    <!-- CHECKLIST -->
+    <section class="hl-article-section hl-article-checklist">
+        <h2>Fast Compatibility Checklist</h2>
+        <ul>
+            <li>CPU <strong>socket</strong> matches motherboard; board supports your CPU gen.</li>
+            <li>RAM <strong>type</strong> (DDR4/DDR5) and rated speed supported by motherboard.</li>
+            <li>Case fits motherboard size, GPU length, and cooler/radiator height.</li>
+            <li>PSU has enough <strong>wattage</strong> and the right <strong>connectors</strong> (EPS/PCIe/12VHPWR).
+            </li>
+            <li>Storage slots available (M.2 count/PCIe lanes) for your SSD plans.</li>
+            <li>Monitor resolution/refresh pairs well with your GPU.</li>
+        </ul>
+    </section>
+
+    <!-- MISTAKES -->
+    <section class="hl-article-section hl-article-mistakes">
+        <h2>Beginner Mistakes to Avoid</h2>
+        <ul>
+            <li>❌ Buying incompatible parts (confirm socket/RAM type and case clearances).</li>
+            <li>❌ Skimping on the PSU (quality and connectors matter).</li>
+            <li>❌ Ignoring airflow (plan intake/exhaust and use filters).</li>
+            <li>❌ Not enabling XMP/EXPO for RAM (you’ll run slower than rated).</li>
+            <li>❌ Forgetting standoffs or over-tightening screws on the motherboard.</li>
+            <li>❌ Handling parts without discharging static (touch the case/PSU frame first).</li>
+        </ul>
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="hl-article-section hl-article-summary">
+        <p>
+            <strong>In short:</strong> Motherboard sets compatibility; CPU handles compute; GPU drives visuals; RAM
+            keeps active data fast;
+            SSD/HDD store everything; PSU powers safely; case manages airflow and fit. Nail compatibility, airflow, and
+            PSU quality—your build will sing.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="hl-article-section hl-article-cta">
+        <p><em>This is my first blog.</em> Next up: a focused buying guide with part recommendations by budget and
+            use-case.</p>
+        <a href="pc-buying-guide-2025.html" class="hl-article-btn">👉 Read the Buying Guide</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="logo.jpg" alt="Hardware Decoded Logo" width="40" height="40" class="me-2">
+                        <h5 class="mb-0">Hardware Decoded</h5>
+                    </div>
+                    <p class="text-light opacity-75 mb-3">
+                        PC Components, Explained — With News That Matters
+                    </p>
+                    <p class="text-light opacity-75 small mb-0">
+                        hardwaredecoded@gmail.com
+                    </p>
+                </div>
+
+                <!-- Navigation (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Navigation</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../index.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Home</a></li>
+                                <li><a href="../blogs.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">All Blogs</a>
+                                </li>
+                                <li><a href="../about-us.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../contact.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Categories</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=cpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">CPUs</a></li>
+                                <li><a href="../blogs.html?filter=gpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">GPUs</a></li>
+                                <li><a href="../blogs.html?filter=motherboards"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Motherboards</a>
+                                </li>
+                                <li><a href="../blogs.html?filter=explainers"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Explainers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=storage-memory"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Storage &
+                                        Memory</a></li>
+                                <li><a href="../blogs.html?filter=power-cooling"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Power &
+                                        Cooling</a></li>
+                                <li><a href="../blogs.html?filter=cases"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Cases</a></li>
+                                <li><a href="../blogs.html?filter=news"
+                                        class="text-light opacity-75 text-decoration-none footer-link">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr class="my-4 opacity-25">
+
+            <!-- Bottom Footer -->
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0 text-light opacity-75 small">
+                        &copy; <span id="current-year"></span> Hardware Decoded. All rights reserved.
+                        | Developed by <strong class="text-white">Yashas Chaudhry</strong>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                    <div class="d-flex flex-wrap gap-3 justify-content-md-end justify-content-start">
+                        <a href="../privacy-policy.html" class="text-primary text-decoration-none small">Privacy
+                            Policy</a>
+                        <a href="../terms-of-service.html" class="text-primary text-decoration-none small">Terms of
+                            Service</a>
+                        <button class="btn btn-link btn-sm text-light opacity-75 p-0 back-to-top" id="back-to-top">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                                <path fill-rule="evenodd"
+                                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                            </svg>
+                            Back to Top
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Auto year
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

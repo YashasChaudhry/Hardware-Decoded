@@ -238,4 +238,3 @@ function initShrinkNavbar() {
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 }
-

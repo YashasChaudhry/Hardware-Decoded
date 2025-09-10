@@ -90,7 +90,7 @@ body {
 /* Hero section */
 .hero-section {
     min-height: 60vh;
-    background: linear-gradient(135deg, var(--slate-100) 0%, var(--white) 100%);
+    background: #0A3054;
 }
 
 [data-theme="dark"] .hero-section {

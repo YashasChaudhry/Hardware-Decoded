@@ -1,19 +1,19 @@
 // Hardware Decoded Custom JavaScript (cleaned)
-
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();       // default light
+    initThemeToggle();          // default light
     initCurrentYear();
     initSmoothScroll();
     initNewsletterForm();
-    initBackToTop();         // show/hide + smooth scroll
-    initNavbarAutoCollapse();
+    initBackToTop();            // show/hide + smooth scroll
+    initNavbarAutoCollapse();   // collapse navbar on link click
 
-    // Page-specific
+    // Page-specific initialization
     if (document.getElementById('filter-buttons')) {
         initBlogFilters();
         initLoadMore();
         checkUrlFilter();
     }
+
     if (document.getElementById('latest-news-btn')) {
         initLatestNewsButton();
     }
@@ -27,7 +27,6 @@ function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
-    // Force default to light unless user already chose
     const saved = localStorage.getItem('theme');
     const currentTheme = saved ? saved : 'light';
     html.setAttribute('data-theme', currentTheme);
@@ -48,15 +47,12 @@ function updateThemeIcon(theme) {
     const themeToggle = document.getElementById('theme-toggle');
     if (!themeToggle) return;
 
-    // Replace with an image instead of SVG
-    themeToggle.innerHTML =
-        theme === 'dark'
-            ? '<img src="moon.png" alt="Moon Icon" width="16" height="16">'
-            : '<img src="sun.png" alt="Sun Icon" width="16" height="16">';
+    themeToggle.innerHTML = theme === 'dark'
+        ? '<img src="moon.png" alt="Moon Icon" width="16" height="16">'
+        : '<img src="sun.png" alt="Sun Icon" width="16" height="16">';
 }
 
-
-// ---------------- Smooth scroll ----------------
+// ---------------- Smooth Scroll ----------------
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
@@ -72,6 +68,7 @@ function initSmoothScroll() {
 function initNewsletterForm() {
     const form = document.getElementById('newsletter-form');
     if (!form) return;
+
     form.addEventListener('submit', e => {
         e.preventDefault();
         const email = form.querySelector('input[type="email"]')?.value || '';
@@ -84,13 +81,14 @@ function initNewsletterForm() {
 function initLatestNewsButton() {
     const btn = document.getElementById('latest-news-btn');
     if (!btn) return;
+
     btn.addEventListener('click', e => {
         e.preventDefault();
         window.location.href = 'blogs.html?filter=news';
     });
 }
 
-// ---------------- Blog filters + load more ----------------
+// ---------------- Blog filters + Load More ----------------
 function initBlogFilters() {
     const buttons = document.querySelectorAll('#filter-buttons .btn');
     if (!buttons.length) return;
@@ -115,18 +113,19 @@ function initBlogFilters() {
 
 function filterPosts(filter) {
     document.querySelectorAll('.post-card').forEach(card => {
-        card.style.display =
-            filter === 'all' || card.getAttribute('data-category') === filter
-                ? 'block'
-                : 'none';
+        card.style.display = filter === 'all' || card.getAttribute('data-category') === filter
+            ? 'block'
+            : 'none';
     });
 }
 
 function checkUrlFilter() {
     const filterParam = new URLSearchParams(window.location.search).get('filter');
     if (!filterParam) return;
+
     const btn = document.querySelector(`[data-filter="${filterParam}"]`);
     if (!btn) return;
+
     document.querySelectorAll('#filter-buttons .btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     filterPosts(filterParam);
@@ -136,9 +135,8 @@ function initLoadMore() {
     const loadMoreBtn = document.getElementById('load-more-btn');
     if (!loadMoreBtn) return;
 
-    const visibleHiddenPosts = () =>
-        Array.from(document.querySelectorAll('.post-card.hidden'))
-            .filter(p => p.style.display !== 'none');
+    const visibleHiddenPosts = () => Array.from(document.querySelectorAll('.post-card.hidden'))
+        .filter(p => p.style.display !== 'none');
 
     const reveal = post => {
         post.classList.remove('hidden');
@@ -158,9 +156,11 @@ function initLoadMore() {
 
     loadMoreBtn.addEventListener('click', () => {
         visibleHiddenPosts().slice(0, 3).forEach(reveal);
+
         loadMoreBtn.classList.add('loading');
         loadMoreBtn.setAttribute('aria-busy', 'true');
         loadMoreBtn.disabled = true;
+
         const prevLabel = loadMoreBtn.textContent;
         loadMoreBtn.textContent = 'Loading...';
 
@@ -180,6 +180,7 @@ function initLoadMore() {
 function resetLoadMore() {
     const posts = Array.from(document.querySelectorAll('.post-card'));
     const loadMoreBtn = document.getElementById('load-more-btn');
+
     const visibleByFilter = posts.filter(p => p.style.display !== 'none');
 
     visibleByFilter.forEach((post, idx) => {
@@ -199,6 +200,7 @@ function initNavbarAutoCollapse() {
         link.addEventListener('click', () => {
             const navbarCollapse = document.getElementById('navbarNav');
             if (!navbarCollapse) return;
+
             const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
             if (bsCollapse) bsCollapse.hide();
         });
@@ -214,6 +216,7 @@ function initBackToTop() {
         if (window.scrollY > 200) btn.classList.add('show');
         else btn.classList.remove('show');
     };
+
     window.addEventListener('scroll', toggle, { passive: true });
     toggle();
 
@@ -227,10 +230,12 @@ function initBackToTop() {
 function initShrinkNavbar() {
     const nav = document.getElementById('site-navbar');
     if (!nav) return;
+
     const onScroll = () => {
         if (window.scrollY > 8) nav.classList.add('nav-scrolled');
         else nav.classList.remove('nav-scrolled');
     };
+
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
 }

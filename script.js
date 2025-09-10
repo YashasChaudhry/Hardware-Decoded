@@ -1,19 +1,19 @@
-// Hardware Decoded Custom JavaScript (cleaned)
-
+// Hardware Decoded Custom JavaScript (fixed)
 document.addEventListener('DOMContentLoaded', () => {
-    initThemeToggle();       // default light
+    initThemeToggle();
     initCurrentYear();
     initSmoothScroll();
     initNewsletterForm();
-    initBackToTop();         // show/hide + smooth scroll
+    initBackToTop();
     initNavbarAutoCollapse();
 
-    // Page-specific
+    // Page-specific initialization
     if (document.getElementById('filter-buttons')) {
         initBlogFilters();
         initLoadMore();
         checkUrlFilter();
     }
+
     if (document.getElementById('latest-news-btn')) {
         initLatestNewsButton();
     }
@@ -27,7 +27,7 @@ function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const html = document.documentElement;
 
-    // Force default to light unless user already chose
+    // Get saved theme or default to light
     const saved = localStorage.getItem('theme');
     const currentTheme = saved ? saved : 'light';
     html.setAttribute('data-theme', currentTheme);
@@ -48,15 +48,20 @@ function updateThemeIcon(theme) {
     const themeToggle = document.getElementById('theme-toggle');
     if (!themeToggle) return;
 
-    // Replace with an image instead of SVG
-    themeToggle.innerHTML =
-        theme === 'dark'
-            ? '<img src="moon.png" alt="Moon Icon" width="16" height="16">'
-            : '<img src="sun.png" alt="Sun Icon" width="16" height="16">';
+    themeToggle.innerHTML = theme === 'dark'
+        ? '<img src="moon.png" alt="Moon Icon" width="16" height="16">'
+        : '<img src="sun.png" alt="Sun Icon" width="16" height="16">';
 }
 
+// ---------------- Current Year ----------------
+function initCurrentYear() {
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+}
 
-// ---------------- Smooth scroll ----------------
+// ---------------- Smooth Scroll ----------------
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', e => {
@@ -72,6 +77,7 @@ function initSmoothScroll() {
 function initNewsletterForm() {
     const form = document.getElementById('newsletter-form');
     if (!form) return;
+
     form.addEventListener('submit', e => {
         e.preventDefault();
         const email = form.querySelector('input[type="email"]')?.value || '';
@@ -84,13 +90,14 @@ function initNewsletterForm() {
 function initLatestNewsButton() {
     const btn = document.getElementById('latest-news-btn');
     if (!btn) return;
+
     btn.addEventListener('click', e => {
         e.preventDefault();
         window.location.href = 'blogs.html?filter=news';
     });
 }
 
-// ---------------- Blog filters + load more ----------------
+// ---------------- Blog filters + Load More ----------------
 function initBlogFilters() {
     const buttons = document.querySelectorAll('#filter-buttons .btn');
     if (!buttons.length) return;
@@ -99,36 +106,52 @@ function initBlogFilters() {
         button.addEventListener('click', function () {
             const filter = this.getAttribute('data-filter');
 
+            // Remove active class from all buttons
             buttons.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
             this.classList.add('active');
 
+            // Filter posts
             filterPosts(filter);
+            // Reset load more functionality
             resetLoadMore();
 
+            // Update URL
             const url = new URL(window.location);
-            if (filter === 'all') url.searchParams.delete('filter');
-            else url.searchParams.set('filter', filter);
+            if (filter === 'all') {
+                url.searchParams.delete('filter');
+            } else {
+                url.searchParams.set('filter', filter);
+            }
             window.history.replaceState({}, '', url);
         });
     });
 }
 
 function filterPosts(filter) {
-    document.querySelectorAll('.post-card').forEach(card => {
-        card.style.display =
-            filter === 'all' || card.getAttribute('data-category') === filter
-                ? 'block'
-                : 'none';
+    const posts = document.querySelectorAll('.post-card');
+    posts.forEach(card => {
+        const category = card.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
     });
 }
 
 function checkUrlFilter() {
     const filterParam = new URLSearchParams(window.location.search).get('filter');
     if (!filterParam) return;
+
     const btn = document.querySelector(`[data-filter="${filterParam}"]`);
     if (!btn) return;
+
+    // Remove active from all buttons
     document.querySelectorAll('#filter-buttons .btn').forEach(b => b.classList.remove('active'));
+    // Add active to the correct button
     btn.classList.add('active');
+    // Apply the filter
     filterPosts(filterParam);
 }
 
@@ -136,60 +159,92 @@ function initLoadMore() {
     const loadMoreBtn = document.getElementById('load-more-btn');
     if (!loadMoreBtn) return;
 
-    const visibleHiddenPosts = () =>
-        Array.from(document.querySelectorAll('.post-card.hidden'))
-            .filter(p => p.style.display !== 'none');
+    // Function to get visible hidden posts based on current filter
+    const getVisibleHiddenPosts = () => {
+        return Array.from(document.querySelectorAll('.post-card.hidden'))
+            .filter(post => post.style.display !== 'none');
+    };
 
-    const reveal = post => {
+    // Function to reveal a post with animation
+    const revealPost = (post) => {
         post.classList.remove('hidden');
+        // Add smooth reveal animation
+        post.style.opacity = '0';
+        post.style.transform = 'translateY(20px)';
+
         setTimeout(() => {
             post.style.opacity = '1';
             post.style.transform = 'translateY(0)';
-        }, 20);
+            post.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        }, 50);
+
+        // Clean up inline styles after animation
         setTimeout(() => {
             post.style.removeProperty('opacity');
             post.style.removeProperty('transform');
+            post.style.removeProperty('transition');
         }, 350);
     };
 
-    const setButtonVisibility = () => {
-        loadMoreBtn.style.display = visibleHiddenPosts().length ? 'inline-block' : 'none';
+    // Function to update button visibility
+    const updateLoadMoreButton = () => {
+        const hiddenPosts = getVisibleHiddenPosts();
+        loadMoreBtn.style.display = hiddenPosts.length > 0 ? 'inline-block' : 'none';
     };
 
+    // Load more button click handler
     loadMoreBtn.addEventListener('click', () => {
-        visibleHiddenPosts().slice(0, 3).forEach(reveal);
+        const hiddenPosts = getVisibleHiddenPosts();
+        const postsToShow = hiddenPosts.slice(0, 3); // Show 3 more posts
+
+        // Show loading state
         loadMoreBtn.classList.add('loading');
         loadMoreBtn.setAttribute('aria-busy', 'true');
         loadMoreBtn.disabled = true;
-        const prevLabel = loadMoreBtn.textContent;
+
+        const originalText = loadMoreBtn.textContent;
         loadMoreBtn.textContent = 'Loading...';
 
+        // Simulate loading delay and reveal posts
         setTimeout(() => {
+            postsToShow.forEach(revealPost);
+
+            // Reset button state
             loadMoreBtn.classList.remove('loading');
             loadMoreBtn.removeAttribute('aria-busy');
             loadMoreBtn.disabled = false;
-            loadMoreBtn.textContent = prevLabel || 'Load More Posts';
+            loadMoreBtn.textContent = originalText;
             loadMoreBtn.blur();
-            setButtonVisibility();
+
+            // Update button visibility
+            updateLoadMoreButton();
         }, 500);
     });
 
-    setButtonVisibility();
+    // Initial button state
+    updateLoadMoreButton();
 }
 
 function resetLoadMore() {
-    const posts = Array.from(document.querySelectorAll('.post-card'));
+    const allPosts = Array.from(document.querySelectorAll('.post-card'));
     const loadMoreBtn = document.getElementById('load-more-btn');
-    const visibleByFilter = posts.filter(p => p.style.display !== 'none');
 
-    visibleByFilter.forEach((post, idx) => {
-        if (idx < 9) post.classList.remove('hidden');
-        else post.classList.add('hidden');
+    // Filter posts that are visible based on current category filter
+    const visiblePosts = allPosts.filter(post => post.style.display !== 'none');
+
+    // Show first 9 posts, hide the rest
+    visiblePosts.forEach((post, index) => {
+        if (index < 9) {
+            post.classList.remove('hidden');
+        } else {
+            post.classList.add('hidden');
+        }
     });
 
+    // Update load more button visibility
     if (loadMoreBtn) {
-        const remaining = visibleByFilter.filter(p => p.classList.contains('hidden')).length;
-        loadMoreBtn.style.display = remaining ? 'inline-block' : 'none';
+        const hiddenCount = visiblePosts.filter(post => post.classList.contains('hidden')).length;
+        loadMoreBtn.style.display = hiddenCount > 0 ? 'inline-block' : 'none';
     }
 }
 
@@ -199,8 +254,14 @@ function initNavbarAutoCollapse() {
         link.addEventListener('click', () => {
             const navbarCollapse = document.getElementById('navbarNav');
             if (!navbarCollapse) return;
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
-            if (bsCollapse) bsCollapse.hide();
+
+            // Check if Bootstrap is available
+            if (typeof bootstrap !== 'undefined' && bootstrap.Collapse) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                if (bsCollapse) {
+                    bsCollapse.hide();
+                }
+            }
         });
     });
 }
@@ -210,13 +271,22 @@ function initBackToTop() {
     const btn = document.getElementById('back-to-top');
     if (!btn) return;
 
-    const toggle = () => {
-        if (window.scrollY > 200) btn.classList.add('show');
-        else btn.classList.remove('show');
+    // Function to toggle button visibility
+    const toggleBackToTop = () => {
+        if (window.scrollY > 200) {
+            btn.classList.add('show');
+        } else {
+            btn.classList.remove('show');
+        }
     };
-    window.addEventListener('scroll', toggle, { passive: true });
-    toggle();
 
+    // Listen for scroll events
+    window.addEventListener('scroll', toggleBackToTop, { passive: true });
+
+    // Initial check
+    toggleBackToTop();
+
+    // Click handler
     btn.addEventListener('click', e => {
         e.preventDefault();
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -227,10 +297,18 @@ function initBackToTop() {
 function initShrinkNavbar() {
     const nav = document.getElementById('site-navbar');
     if (!nav) return;
-    const onScroll = () => {
-        if (window.scrollY > 8) nav.classList.add('nav-scrolled');
-        else nav.classList.remove('nav-scrolled');
+
+    const handleScroll = () => {
+        if (window.scrollY > 8) {
+            nav.classList.add('nav-scrolled');
+        } else {
+            nav.classList.remove('nav-scrolled');
+        }
     };
-    onScroll();
-    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Initial check
+    handleScroll();
+
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll, { passive: true });
 }

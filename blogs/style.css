@@ -71,8 +71,8 @@ body {
 }
 
 [data-theme="dark"] .card {
-    background-color: var(--slate-700);
-    border-color: var(--slate-700);
+    background-color: var(--slate-500);
+    border-color: var(--slate-500);
 }
 
 [data-theme="dark"] .navbar-toggler {
@@ -90,7 +90,7 @@ body {
 /* Hero section */
 .hero-section {
     min-height: 60vh;
-    background: #0A3054;
+    background: #001133;
 }
 
 [data-theme="dark"] .hero-section {
@@ -245,7 +245,21 @@ footer a:hover {
     align-items: center;
     justify-content: center;
     padding: 0;
+    background-color: var(--white);
+    /* light background */
 }
+
+[data-theme="dark"] #theme-toggle {
+    background-color: var(--slate-700);
+    /* dark background */
+}
+
+#theme-toggle:focus,
+#theme-toggle:active {
+    outline: none;
+    box-shadow: none;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -357,29 +371,36 @@ a {
     background: var(--blue-300);
 }
 
+/* Coming Soon Ribbon */
+.coming-soon-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon-ribbon {
+    position: absolute;
+    top: 35px;
+    /* moves it lower */
+    right: -50px;
+    /* extend more outward so the diagonal fully spans */
+    background: #dc3545;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 6px 60px;
+    /* wider so it covers corner nicely */
+    transform: rotate(45deg);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Prevent clicking while it's "coming soon" */
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+}
 
 /* White navbar with blue text */
 #site-navbar {
@@ -437,20 +458,6 @@ a {
     padding-top: .25rem;
     padding-bottom: .25rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 991.98px) {
     .navbar-collapse.collapse:not(.show) {
@@ -591,4 +598,21 @@ a {
     background-color: #fd7e14;
     /* amber orange */
     color: #fff;
+}
+
+[data-theme="light"] .bg-light-blue {
+    background-color: #f4f6fb;
+    /* only applied in dark theme */
+}
+
+[data-theme="light"] .bg-very-light-blue {
+    background-color: #f8f8fa;
+    /* only applied in dark theme */
+}
+
+h2.about-heading {
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--blue-500), var(--blue-300));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

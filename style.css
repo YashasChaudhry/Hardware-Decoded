@@ -245,7 +245,21 @@ footer a:hover {
     align-items: center;
     justify-content: center;
     padding: 0;
+    background-color: var(--white);
+    /* light background */
 }
+
+[data-theme="dark"] #theme-toggle {
+    background-color: var(--slate-700);
+    /* dark background */
+}
+
+#theme-toggle:focus,
+#theme-toggle:active {
+    outline: none;
+    box-shadow: none;
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {

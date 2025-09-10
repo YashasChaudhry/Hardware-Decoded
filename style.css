@@ -90,7 +90,7 @@ body {
 /* Hero section */
 .hero-section {
     min-height: 60vh;
-    background: #0A3054;
+    background: #001133;
 }
 
 [data-theme="dark"] .hero-section {

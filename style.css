@@ -108,20 +108,19 @@ body {
 }
 
 /* Card hover effects */
-.post-card,
-.category-card,
+.blog-post-card,
 .related-post-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.post-card:hover,
+.blog-post-card:hover,
 .category-card:hover,
 .related-post-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-[data-theme="dark"] .post-card:hover,
+[data-theme="dark"] .blog-post-card:hover,
 [data-theme="dark"] .category-card:hover,
 [data-theme="dark"] .related-post-card:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);

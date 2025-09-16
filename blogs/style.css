@@ -108,7 +108,6 @@ body {
 }
 
 /* Card hover effects */
-.post-card,
 .category-card,
 .related-post-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;

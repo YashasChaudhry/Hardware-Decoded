@@ -170,3 +170,210 @@
         max-width: 1080px;
     }
 }
+
+:root {
+    --blue-500: #1f6feb;
+    --blue-700: #123D70;
+    --blue-300: #76a9ff;
+    --slate-900: #0b0f19;
+    --slate-700: #1a2233;
+    --slate-100: #f4f6fb;
+    --white: #ffffff;
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --bs-body-bg: var(--slate-900);
+    --bs-body-color: var(--slate-100);
+    --bs-light: var(--slate-700);
+    --bs-dark: var(--slate-100);
+}
+
+/* System font stack */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-feature-settings: "kern";
+    line-height: 1.6;
+}
+
+/* Bootstrap overrides used */
+.bg-primary {
+    background-color: var(--blue-500) !important;
+}
+
+.btn-outline-primary {
+    color: var(--blue-500);
+    border-color: var(--blue-500);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background-color: var(--blue-500);
+    border-color: var(--blue-500);
+    color: #fff;
+}
+
+.text-primary {
+    color: var(--blue-500) !important;
+}
+
+/* Focus states */
+.btn:focus,
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(31, 111, 235, 0.25);
+    outline: none;
+}
+
+/* Navbar */
+#site-navbar {
+    background-color: #fff !important;
+    transition: box-shadow 0.25s ease, padding 0.25s ease;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--bs-primary);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: #0b5ed7;
+}
+
+.link-underline {
+    position: relative;
+}
+
+.link-underline::after {
+    content: "";
+    position: absolute;
+    left: 0.4rem;
+    right: 0.4rem;
+    bottom: 0.3rem;
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.22s ease;
+    opacity: 0.7;
+}
+
+.link-underline:hover::after,
+.link-underline.active::after {
+    transform: scaleX(1);
+}
+
+/* Button hover */
+.button-hover {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Theme toggle */
+#theme-toggle {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background-color: var(--white);
+}
+
+#theme-toggle:focus,
+#theme-toggle:active {
+    outline: none;
+    box-shadow: none;
+}
+
+[data-theme="dark"] #theme-toggle {
+    background-color: var(--white);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+    /* Blog color variables (light mode) */
+    --article-bg: var(--white);
+    /* section + box background */
+    --article-text: var(--slate-900);
+    /* main text */
+    --article-heading: var(--slate-900);
+    --article-border: #e5e5e5;
+    --article-subtle: var(--slate-700);
+    /* muted text */
+}
+
+[data-theme="dark"] {
+    /* Blog color variables (dark mode) */
+    --article-bg: var(--slate-700);
+    /* darker box background */
+    --article-text: var(--slate-100);
+    /* light text */
+    --article-heading: var(--white);
+    --article-border: var(--slate-900);
+    --article-subtle: #a0aec0;
+    /* lighter muted text */
+}
+
+/* Apply vars to blog sections */
+.hl-article-section h1,
+.hl-article-section h2 {
+    color: var(--article-heading);
+}
+
+.hl-article-section p {
+    color: var(--article-text);
+}
+
+.hl-article-intro,
+.hl-article-component,
+.hl-article-checklist,
+.hl-article-summary {
+    background: var(--article-bg);
+    color: var(--article-text);
+    border: 1px solid var(--article-border);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.hl-article-hero p {
+    color: var(--article-subtle);
+}

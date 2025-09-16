@@ -109,19 +109,22 @@ body {
 
 /* Card hover effects */
 .blog-post-card,
-.related-post-card {
+.related-post-card,
+.coming-soon-card {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .blog-post-card:hover,
 .category-card:hover,
-.related-post-card:hover {
+.related-post-card:hover,
+.coming-soon-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] .blog-post-card:hover,
 [data-theme="dark"] .category-card:hover,
+[data-theme="dark"] .coming-soon-card:hover,
 [data-theme="dark"] .related-post-card:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
@@ -392,7 +395,6 @@ a {
 
 /* Prevent clicking while it's "coming soon" */
 .disabled-link {
-    pointer-events: none;
     cursor: default;
 }
 

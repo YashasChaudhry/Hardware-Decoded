@@ -133,6 +133,8 @@ body {
     border-radius: 8px 8px 0 0;
 }
 
+
+
 .post-image {
     height: 150px;
     background-size: cover;
@@ -152,6 +154,7 @@ body {
 
 [data-theme="dark"] .category-card {
     border-color: rgba(255, 255, 255, 0.1);
+    background-color: #1e293b;
 }
 
 [data-theme="dark"] .category-card:hover {

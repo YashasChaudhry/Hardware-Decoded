@@ -120,6 +120,7 @@ body {
 .coming-soon-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    background-color: #f9fafb;
 }
 
 [data-theme="dark"] .blog-post-card:hover,
@@ -127,6 +128,7 @@ body {
 [data-theme="dark"] .coming-soon-card:hover,
 [data-theme="dark"] .related-post-card:hover {
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    background-color: #161c29;
 }
 
 /* Blog post cards */
@@ -618,4 +620,25 @@ h2.about-heading {
 [data-theme="dark"] #theme-toggle {
     background-color: var(--white);
     /* dark background */
+}
+
+/* Dark theme for newsletter */
+[data-theme="dark"] #newsletter {
+    background: #1a2233;
+    /* or a darker slate color */
+    border-top: 1px solid #2a2f44;
+    border-bottom: 1px solid #2a2f44;
+}
+
+[data-theme="dark"] #newsletter .nl-box {
+    background: #161c29;
+    /* darker card background */
+    border: 1px solid #2a2f44;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+    /* stronger shadow for contrast */
+}
+
+[data-theme="dark"] #newsletter .nl-box::before {
+    background: #ff4d4d;
+    /* optional: slightly darker badge color for contrast */
 }

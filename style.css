@@ -655,6 +655,91 @@ h2.about-heading {
     /* optional: slightly darker badge color for contrast */
 }
 
+/* Footer - Force Light Mode Appearance */
+footer {
+    background-color: #212529 !important;
+    color: #f8f9fa !important;
+}
+
+footer .text-light {
+    color: #f8f9fa !important;
+}
+
+footer .opacity-75 {
+    opacity: 0.75 !important;
+}
+
+footer .opacity-25 {
+    opacity: 0.25 !important;
+}
+
+footer .footer-link {
+    color: #f8f9fa !important;
+    opacity: 0.75 !important;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+footer .footer-link:hover {
+    opacity: 1 !important;
+    transform: translateX(2px);
+    color: #f8f9fa !important;
+}
+
+footer .text-primary {
+    color: #0d6efd !important;
+}
+
+footer .back-to-top {
+    color: #f8f9fa !important;
+    opacity: 0.75 !important;
+    transition: all 0.2s ease;
+    border: none !important;
+    font-size: 0.875rem;
+}
+
+footer .back-to-top:hover {
+    opacity: 1 !important;
+    transform: translateY(-1px);
+    color: #f8f9fa !important;
+}
+
+footer hr {
+    border-color: rgba(255, 255, 255, 0.25) !important;
+}
+
+/* Override any dark theme styles for footer */
+[data-theme="dark"] footer {
+    background-color: #212529 !important;
+    color: #f8f9fa !important;
+}
+
+[data-theme="dark"] footer .text-light {
+    color: #f8f9fa !important;
+}
+
+[data-theme="dark"] footer .footer-link {
+    color: #f8f9fa !important;
+    opacity: 0.75 !important;
+}
+
+[data-theme="dark"] footer .footer-link:hover {
+    color: #f8f9fa !important;
+}
+
+[data-theme="dark"] footer .text-primary {
+    color: #0d6efd !important;
+}
+
+[data-theme="dark"] footer .back-to-top {
+    color: #f8f9fa !important;
+}
+
+[data-theme="dark"] footer .back-to-top:hover {
+    color: #f8f9fa !important;
+}
+
+
+
 
 
 

@@ -13,11 +13,6 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://hardwaredecoded.com/index.html</loc>
-  <lastmod>2026-04-03T10:14:50+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://hardwaredecoded.com/blogs.html</loc>
   <lastmod>2026-04-03T10:14:50+00:00</lastmod>
   <priority>0.80</priority>
@@ -127,6 +122,60 @@
   <lastmod>2026-04-03T10:14:50+00:00</lastmod>
   <priority>0.64</priority>
 </url>
-
+<url>
+  <loc>https://hardwaredecoded.com/blogs/ai-pc-npu-copilot+-2026.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/best-gaming-pc-builds-2026.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/best-gpu-for-gaming-2026.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/best-laptop-guide-2026.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/cloud3.0-explained-ai-native-infrastructure.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/aio-vs-air-cooling.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/pcie-4-vs-5-ssd-explained.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/mini-itx-vs-micro-atx.html</loc>
+  <lastmod>2026-11-25T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/amd-vs-intel-gaming-cpus-2026.html</loc>
+  <lastmod>2026-11-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/rtx-5060-vs-rx-9060-xt.html</loc>
+  <lastmod>2026-11-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://hardwaredecoded.com/blogs/ram-speed-guide-ddr5.html</loc>
+  <lastmod>2026-11-26T00:00:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
 
 </urlset>

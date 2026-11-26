@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL8T1J70HD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZL8T1J70HD');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIO vs Air Cooling: Which Is Right for Your CPU? | Hardware Decoded</title>
+    <meta name="description" content="Liquid or air? Compare cooling performance, noise, reliability, cost and case fit — and find out which CPU cooler actually makes sense for your build.">
+    <link rel="canonical" href="https://hardwaredecoded.com/blogs/aio-vs-air-cooling.html">
+    <link rel="icon" href="../Logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AIO vs Air Cooling: Which Is Right for Your CPU?">
+    <meta property="og:description" content="Liquid or air? Compare cooling performance, noise, reliability, cost and case fit — and find out which CPU cooler actually makes sense for your build.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hardwaredecoded.com/blogs/aio-vs-air-cooling.html">
+    <meta property="og:image" content="https://hardwaredecoded.com/covers/blog15%28aio-vs-air-cooling%29.png">
+    <meta property="og:site_name" content="Hardware Decoded">
+    <meta property="article:published_time" content="2026-11-25">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AIO vs Air Cooling: Which Is Right for Your CPU?">
+    <meta name="twitter:description" content="Liquid or air? Compare cooling performance, noise, reliability, cost and case fit — and find out which CPU cooler actually makes sense for your build.">
+    <meta name="twitter:image" content="https://hardwaredecoded.com/covers/blog15%28aio-vs-air-cooling%29.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://hardwaredecoded.com/blogs/aio-vs-air-cooling.html#article",
+      "headline": "AIO vs Air Cooling: Which Is Right for Your CPU?",
+      "description": "Liquid or air? Compare cooling performance, noise, reliability, cost and case fit — and find out which CPU cooler actually makes sense for your build.",
+      "image": "https://hardwaredecoded.com/covers/blog15%28aio-vs-air-cooling%29.png",
+      "datePublished": "2026-11-25",
+      "dateModified": "2026-11-25",
+      "author": {
+        "@type": "Organization",
+        "name": "Hardware Decoded",
+        "url": "https://hardwaredecoded.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hardware Decoded",
+        "url": "https://hardwaredecoded.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hardwaredecoded.com/Logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hardwaredecoded.com/blogs/aio-vs-air-cooling.html"
+      },
+      "keywords": "AIO vs air cooler, best CPU cooler 2026, liquid cooling vs air cooling, is an AIO worth it, 360mm AIO vs air cooler, CPU cooler noise, AIO pump lifespan"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hardwaredecoded.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://hardwaredecoded.com/blogs.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AIO vs Air Cooling",
+          "item": "https://hardwaredecoded.com/blogs/aio-vs-air-cooling.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do AIO coolers leak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Leaks are rare on reputable brands, but they can happen, and an air cooler cannot leak at all. Buying from a well-known manufacturer with a solid warranty keeps the risk very low."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does an AIO last?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most modern sealed AIOs last five years or more, with the pump being the main wear item. Air coolers can last a decade or longer, and their fans can be replaced."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a 360mm AIO better than a big air cooler?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For sustained loads above roughly 200W a 360mm radiator has more headroom. For most CPUs and most gaming, a flagship air cooler is close enough that fit, noise and price should drive the decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need thermal paste for an AIO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most AIOs ship with thermal paste pre-applied on the cold plate. Check the manual for your specific cooler."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="posts.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top nav-animated" id="site-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-primary" href="../index.html">
+                <img src="Logo.jpg" alt="Hardware Decoded Logo" width="48" height="48" class="me-2">
+                <span class="fw-bold">Hardware Decoded</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Blue outline button -->
+                <button class="btn btn-outline-primary btn-sm button-hover" id="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hl-article-section hl-article-hero">
+        <img src="aio-vs-air-cooling.png" alt="AIO liquid cooler and air cooler compared side by side">
+        <h1>AIO vs Air Cooling: Which Is Right for Your CPU?</h1>
+        <p>
+            Liquid or air? Compare cooling performance, noise, reliability, cost and case fit — and find out which CPU cooler actually makes sense for your build.
+        </p>
+    </header>
+
+    <!-- INTRO -->
+    <section class="hl-article-section hl-article-intro">
+        <p>
+            Picking a CPU cooler feels like it should be simple, but the internet has turned it into a war: liquid cooling looks premium and futuristic, while air coolers have a reputation for being boring but bulletproof. So which one do you actually need? The honest answer is that for most PCs the gap is much smaller than the marketing suggests. Here's how AIO liquid coolers and air coolers really compare — on temperatures, noise, reliability, price, and fit — so you can pick the right one for your build instead of the one with the nicest lighting.
+        </p>
+    </section>
+
+    <section class="hl-article-section hl-article-components mb-5">
+        <h2 class="section-heading">How Do Air Coolers and AIOs Actually Work?</h2>
+        <article class="hl-article-component">
+            <h3>Air Coolers: A Heatsink, Heat Pipes, and a Fan</h3>
+            <p>
+                An air cooler is a metal block (the heatsink) that sits on top of your CPU. Copper heat pipes carry heat up into a stack of thin aluminium fins, and one or two fans blow air through those fins to carry the heat away. That's it. The only moving parts are the fans.
+            </p>
+            <p>
+                Air coolers range from small, cheap tower coolers to huge dual-tower designs that rival liquid cooling on many CPUs.
+            </p>
+            <p><strong>Quick tip:</strong> Tall air coolers can overhang your RAM slots or hit your case's side panel, so always check cooler height and RAM clearance before buying.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>AIOs: A Sealed Loop With a Pump and Radiator</h3>
+            <p>
+                AIO stands for "all-in-one." It's a sealed liquid loop that comes pre-filled. A cold plate sits on the CPU, a small pump circulates coolant through two tubes to a radiator, and fans on that radiator push the heat out of your case. Radiators come in 120mm, 240mm, 280mm, 360mm and even 420mm sizes — the bigger the radiator, the more heat it can shed.
+            </p>
+            <p>
+                Because the heavy radiator mounts to the case instead of the CPU socket, the area around your CPU stays clear. That's a big reason AIOs look so clean.
+            </p>
+            <p><strong>Quick tip:</strong> You don't need to fill, bleed, or maintain an AIO. It's a sealed unit — you just mount it and plug it in.</p>
+        </article>
+
+    </section>
+
+    <section class="hl-article-section hl-article-components my-5">
+        <h2 class="section-heading">Air vs AIO: The Real Differences</h2>
+        <article class="hl-article-component">
+            <h3>1. Cooling Performance</h3>
+            <p>
+                A large 360mm AIO has more thermal headroom than any air cooler when your CPU is pulling a lot of power for a long time — think heavy video rendering or all-core stress tests on a high-end chip. In independent tests the gap between a big AIO and a flagship dual-tower air cooler under sustained heavy load usually lands somewhere between a few degrees and around 10–15°C, depending on the exact coolers and the test.
+            </p>
+            <p>
+                But here's the catch: for the CPUs most people actually run, which stay well under about 200W while gaming, a good air cooler and a good AIO land close together. A cheap 120mm AIO with a single fan isn't automatically better than a quality tower cooler — often it's worse.
+            </p>
+            <p><strong>Quick stat:</strong> The heavier your sustained workload, the more an AIO pulls ahead. For gaming and everyday use, the difference is far smaller.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>2. Noise</h3>
+            <p>
+                This one surprises people: a large air cooler running slow fans is often quieter than a 360mm AIO, because the AIO has a pump and the air cooler doesn't. Pump hum is a low, constant sound that some people never notice and others find annoying in a quiet room.
+            </p>
+            <p>
+                Under heavy load the story can flip. A big radiator with several fans can move more air at lower RPM, so a well-tuned AIO can sound calmer than a small air cooler that has to spin its fan hard.
+            </p>
+            <p><strong>Recommendation:</strong> If you're sensitive to constant background noise, go air. If you want the quietest full-load behaviour on a hot CPU, a large AIO with good fans is hard to beat.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>3. Reliability and Lifespan</h3>
+            <p>
+                An air cooler has one failure point — the fan — and when a fan wears out you can usually replace it for a few dollars. A good air cooler can realistically outlive several PC builds.
+            </p>
+            <p>
+                An AIO's pump is a moving part with a finite life. Modern sealed AIOs commonly last five years or more, but when the pump fails the whole unit is effectively done. Coolant also slowly permeates through the tubing over many years. Real leaks are rare on reputable brands, but they're a failure mode air coolers simply don't have.
+            </p>
+            <p><strong>Quick tip:</strong> Check the warranty length. A longer warranty on a cooler is a good hint of how much confidence the manufacturer has in it.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>4. Price</h3>
+            <p>
+                Air coolers span from budget coolers around the price of a pizza to premium flagships at roughly $100–$110. AIOs start higher and climb quickly — 360mm models with fancy screens and lighting can pass $200. Prices move around, so always check live listings.
+            </p>
+            <p>
+                Because performance per dollar is where air coolers shine, a mid-priced tower cooler is often the smarter spend, leaving more of your budget for the GPU or RAM — and with RAM prices where they are in 2026, every saved dollar counts.
+            </p>
+            <p><strong>Recommendation:</strong> Spending $40–$60 on a solid air cooler beats spending $80 on a weak AIO.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>5. Fit, Looks, and Maintenance</h3>
+            <p>
+                AIOs need a case that supports the radiator size you want, and you'll need to plan where the radiator mounts (top or front). Air coolers need enough height clearance and RAM clearance, and very large ones can make the first install fiddly.
+            </p>
+            <p>
+                On looks, AIOs give a clean, uncluttered socket area, which many people love in a windowed case. Air coolers look more functional. For maintenance, air coolers just need dusting every so often; AIOs need radiator dusting too, plus you should listen for unusual pump noise.
+            </p>
+        </article>
+
+    </section>
+
+    <section class="hl-article-section hl-article-components my-5">
+        <h2 class="section-heading">Which Cooler Should You Pick for Your CPU?</h2>
+        <article class="hl-article-component">
+            <h3>Mainstream CPUs (Ryzen 5, Ryzen 7, Core i5, Core i7 non-K)</h3>
+            <p>
+                These chips run cool enough that a quality air cooler handles them easily and quietly. An AIO here is mostly a style choice. You'll get better value from a good tower cooler.
+            </p>
+            <p><strong>Recommendation:</strong> Air cooler. Put the money you save toward the parts that actually raise your frame rates.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>High-End and Overclocked CPUs (Ryzen 9, Core i9, K-series)</h3>
+            <p>
+                Flagship processors that pull 200W or more under sustained load are where a 280mm or 360mm AIO makes real sense. The bigger radiator keeps temperatures lower and helps the CPU hold boost clocks for longer in heavy workloads like rendering, compiling, and streaming while gaming.
+            </p>
+            <p>
+                A top-tier dual-tower air cooler is still a strong, quieter, and longer-lived option — it just runs a few degrees warmer at the extreme end.
+            </p>
+            <p><strong>Recommendation:</strong> 280mm or 360mm AIO if you push your CPU hard every day; otherwise a flagship air cooler is still fine.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Small Form Factor and Compact Builds</h3>
+            <p>
+                In small cases, cooler height is the limit. Low-profile air coolers are quiet and simple but can't cool a hot CPU. A 240mm AIO mounted to the case can fit where a tall tower never could, so compact builds are one of the best places for liquid cooling.
+            </p>
+            <p>
+                If you're building small, read our guide to choosing the right motherboard size too — it affects what cooler fits.
+            </p>
+        </article>
+
+    </section>
+
+    <section class="hl-article-section hl-article-checklist my-5">
+        <h3 style="margin-top: 1.5rem;">Choose an air cooler if:</h3>
+        <ul>
+            <li>✅ You have a mainstream CPU that stays under roughly 150–200W</li>
+            <li>✅ You want the most reliable, set-and-forget option</li>
+            <li>✅ You're sensitive to pump noise in a quiet room</li>
+            <li>✅ You want the best performance per dollar</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Choose an AIO if:</h3>
+        <ul>
+            <li>✅ You have a high-end or overclocked CPU running heavy sustained loads</li>
+            <li>✅ You have a compact case where a tall air cooler won't fit</li>
+            <li>✅ You want a clean look around the CPU socket in a windowed case</li>
+            <li>✅ Your case supports a 240mm, 280mm, or 360mm radiator</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Common mistakes to avoid:</h3>
+        <ul>
+            <li>🔍 Buying a cheap single-fan 120mm AIO and expecting it to beat a good air cooler</li>
+            <li>🔍 Forgetting to peel the plastic film off the cold plate or heatsink base</li>
+            <li>🔍 Mounting the radiator so the pump is the highest point in the loop — air collects in the pump and makes it noisy; a top-mounted radiator is usually the safest choice</li>
+            <li>🔍 Skipping RAM and case clearance checks on tall air coolers</li>
+            <li>🔍 Choosing based on RGB instead of thermals and noise</li>
+        </ul>
+
+    </section>
+
+    <section class="hl-article-section hl-article-components my-5">
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+        <article class="hl-article-component">
+            <h3>Do AIO coolers leak?</h3>
+            <p>
+                Leaks are rare on reputable brands, but they can happen, and an air cooler can't leak at all. Buying from a well-known manufacturer with a solid warranty keeps the risk very low.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>How long does an AIO last?</h3>
+            <p>
+                Most modern sealed AIOs last five years or more, with the pump being the main wear item. Air coolers can last a decade or longer, and their fans can be replaced.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Do I need to apply thermal paste to an AIO?</h3>
+            <p>
+                Most AIOs come with thermal paste pre-applied on the cold plate. Air coolers often do too, but many also include a tube in the box. Read the manual for your specific cooler.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Is a 360mm AIO better than a big air cooler?</h3>
+            <p>
+                For sustained loads above roughly 200W, a 360mm radiator has more headroom. For most CPUs and most gaming, a flagship air cooler is close enough that fit, noise, and price should drive the decision.
+            </p>
+        </article>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="hl-article-section hl-article-summary">
+        <p>
+            <strong>Bottom line:</strong> For most PCs, a good air cooler is the smarter buy — it's cheaper, extremely reliable, and often quieter. An AIO earns its place on high-end CPUs, compact cases, and clean-looking windowed builds. Pick based on your CPU's power draw, your case, and how much you care about noise, not on which one looks cooler. Whichever you choose, mount it properly and make sure your case airflow is solid.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="hl-article-section hl-article-cta">
+        <p>Ready to install your cooler? Follow our full build walkthrough.</p>
+        <a href="how-to-assemble-your-first-pc.html" class="hl-article-btn">👉 Read: How to Assemble Your First PC Step by Step</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../Logo.png" alt="Hardware Decoded Logo" width="40" height="40" class="me-2">
+                        <h5 class="mb-0">Hardware Decoded</h5>
+                    </div>
+                    <p class="text-light opacity-75 mb-3">
+                        PC Components, Explained — With News That Matters
+                    </p>
+                    <p class="text-light opacity-75 small mb-0">
+                        hardwaredecoded@gmail.com
+                    </p>
+                </div>
+
+                <!-- Navigation (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Navigation</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../index.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Home</a></li>
+                                <li><a href="../blogs.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">All Blogs</a>
+                                </li>
+                                <li><a href="../about-us.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../contact.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Categories</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=cpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">CPUs</a></li>
+                                <li><a href="../blogs.html?filter=gpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">GPUs</a></li>
+                                <li><a href="../blogs.html?filter=motherboards"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Motherboards</a>
+                                </li>
+                                <li><a href="../blogs.html?filter=explainers"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Explainers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=storage-memory"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Storage &
+                                        Memory</a></li>
+                                <li><a href="../blogs.html?filter=power-cooling"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Power &
+                                        Cooling</a></li>
+                                <li><a href="../blogs.html?filter=AI"
+                                        class="text-light opacity-75 text-decoration-none footer-link">AI</a></li>
+                                <li><a href="../blogs.html?filter=news"
+                                        class="text-light opacity-75 text-decoration-none footer-link">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr class="my-4 opacity-25">
+
+            <!-- Bottom Footer -->
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0 text-light opacity-75 small">
+                        &copy; <span id="current-year"></span> Hardware Decoded. All rights reserved.
+                        | Developed by <strong class="text-white">Yashas Chaudhry</strong>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                    <div class="d-flex flex-wrap gap-3 justify-content-md-end justify-content-start">
+                        <a href="../privacy-policy.html" class="text-primary text-decoration-none small">Privacy
+                            Policy</a>
+                        <a href="../terms-of-service.html" class="text-primary text-decoration-none small">Terms of
+                            Service</a>
+                        <button class="btn btn-link btn-sm text-light opacity-75 p-0 back-to-top" id="back-to-top">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                                <path fill-rule="evenodd"
+                                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                            </svg>
+                            Back to Top
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Auto year
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

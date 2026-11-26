@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZL8T1J70HD"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-ZL8T1J70HD');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCIe 4.0 vs 5.0 SSDs: Is Gen 5 Worth It in 2026? | Hardware Decoded</title>
+    <meta name="description" content="PCIe 5.0 SSDs are nearly twice as fast on paper — but do you actually notice? We compare Gen 4 and Gen 5 NVMe drives for gaming, work, heat, and value.">
+    <link rel="canonical" href="https://hardwaredecoded.com/blogs/pcie-4-vs-5-ssd-explained.html">
+    <link rel="icon" href="../Logo.png" type="image/png">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="PCIe 4.0 vs 5.0 SSDs: Is Gen 5 Worth It in 2026?">
+    <meta property="og:description" content="PCIe 5.0 SSDs are nearly twice as fast on paper — but do you actually notice? We compare Gen 4 and Gen 5 NVMe drives for gaming, work, heat, and value.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://hardwaredecoded.com/blogs/pcie-4-vs-5-ssd-explained.html">
+    <meta property="og:image" content="https://hardwaredecoded.com/covers/blog16%28pcie-4-vs-5-ssd-explained%29.png">
+    <meta property="og:site_name" content="Hardware Decoded">
+    <meta property="article:published_time" content="2026-11-25">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PCIe 4.0 vs 5.0 SSDs: Is Gen 5 Worth It in 2026?">
+    <meta name="twitter:description" content="PCIe 5.0 SSDs are nearly twice as fast on paper — but do you actually notice? We compare Gen 4 and Gen 5 NVMe drives for gaming, work, heat, and value.">
+    <meta name="twitter:image" content="https://hardwaredecoded.com/covers/blog16%28pcie-4-vs-5-ssd-explained%29.png">
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://hardwaredecoded.com/blogs/pcie-4-vs-5-ssd-explained.html#article",
+      "headline": "PCIe 4.0 vs 5.0 SSDs: Is Gen 5 Worth It in 2026?",
+      "description": "PCIe 5.0 SSDs are nearly twice as fast on paper — but do you actually notice? We compare Gen 4 and Gen 5 NVMe drives for gaming, work, heat, and value.",
+      "image": "https://hardwaredecoded.com/covers/blog16%28pcie-4-vs-5-ssd-explained%29.png",
+      "datePublished": "2026-11-25",
+      "dateModified": "2026-11-25",
+      "author": {
+        "@type": "Organization",
+        "name": "Hardware Decoded",
+        "url": "https://hardwaredecoded.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Hardware Decoded",
+        "url": "https://hardwaredecoded.com",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://hardwaredecoded.com/Logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://hardwaredecoded.com/blogs/pcie-4-vs-5-ssd-explained.html"
+      },
+      "keywords": "PCIe 4.0 vs 5.0 SSD, is PCIe 5.0 SSD worth it, Gen 4 vs Gen 5 NVMe, best SSD for gaming 2026, PCIe 5.0 SSD heat, NVMe SSD buying guide"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://hardwaredecoded.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blogs",
+          "item": "https://hardwaredecoded.com/blogs.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "PCIe 4.0 vs 5.0 SSDs",
+          "item": "https://hardwaredecoded.com/blogs/pcie-4-vs-5-ssd-explained.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is a PCIe 5.0 SSD worth it for gaming?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Game load times between a good PCIe 4.0 SSD and a PCIe 5.0 SSD are nearly identical, so Gen 5 gives no meaningful gaming advantage today."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will a PCIe 5.0 SSD work in a PCIe 4.0 slot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, it will work, but it will run at PCIe 4.0 speeds."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do PCIe 5.0 SSDs need a heatsink?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Almost always. Gen 5 drives run hot and can throttle without proper cooling, so a good heatsink is strongly recommended."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Should I buy a bigger Gen 4 SSD or a smaller Gen 5 SSD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For almost everyone, the bigger Gen 4 drive is the better buy."
+          }
+        }
+      ]
+    }
+  ]
+}
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="posts.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top nav-animated" id="site-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center text-primary" href="../index.html">
+                <img src="Logo.jpg" alt="Hardware Decoded Logo" width="48" height="48" class="me-2">
+                <span class="fw-bold">Hardware Decoded</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" aria-current="page" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../blogs.html">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../about-us.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-underline" href="../contact.html">Contact</a>
+                    </li>
+                </ul>
+
+                <!-- Blue outline button -->
+                <button class="btn btn-outline-primary btn-sm button-hover" id="theme-toggle"
+                    aria-label="Toggle dark mode">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                        <path
+                            d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hl-article-section hl-article-hero">
+        <img src="pcie-4-vs-5-ssd-explained.png" alt="PCIe 4.0 and PCIe 5.0 NVMe SSDs compared">
+        <h1>PCIe 4.0 vs 5.0 SSDs: Is Gen 5 Worth It in 2026?</h1>
+        <p>
+            PCIe 5.0 SSDs are nearly twice as fast on paper — but do you actually notice? We compare Gen 4 and Gen 5 NVMe drives for gaming, work, heat, and value.
+        </p>
+    </header>
+
+    <!-- INTRO -->
+    <section class="hl-article-section hl-article-intro">
+        <p>
+            PCIe 5.0 SSDs advertise sequential read speeds of 12,000 to 14,500 MB/s — nearly double what the best PCIe 4.0 drives manage. It sounds like a huge upgrade, and the price tag usually reflects that. But speed on a spec sheet isn't the same as speed you can feel. In this guide we'll explain what PCIe generations actually mean, where Gen 5 genuinely helps, where it doesn't, and which one you should buy.
+        </p>
+    </section>
+
+    <section class="hl-article-section hl-article-components mb-5">
+        <h2 class="section-heading">What Does the PCIe Generation Actually Mean?</h2>
+        <article class="hl-article-component">
+            <h3>Every Generation Doubles the Bandwidth</h3>
+            <p>
+                PCIe is the connection between your motherboard and components like your graphics card and your NVMe SSD. Each new generation doubles the bandwidth per lane. A standard M.2 NVMe SSD uses four lanes, which means PCIe 4.0 tops out at roughly 8 GB/s in theory and PCIe 5.0 at roughly 16 GB/s.
+            </p>
+            <p>
+                In real products, top PCIe 4.0 drives such as the Samsung 990 Pro and WD Black SN850X reach around 7,300–7,450 MB/s on reads, while flagship PCIe 5.0 drives reach roughly 12,000–14,500 MB/s. For comparison, a SATA SSD tops out near 550 MB/s and an older PCIe 3.0 NVMe drive around 3,500 MB/s.
+            </p>
+            <p><strong>Quick stat:</strong> A top PCIe 5.0 SSD can be more than 20 times faster than a SATA drive in raw sequential reads — but you'll rarely see that in daily use.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>It's Backwards Compatible</h3>
+            <p>
+                You can put a PCIe 5.0 SSD in a PCIe 4.0 slot and it will work, but only at PCIe 4.0 speeds. The reverse works too: a PCIe 4.0 drive in a Gen 5 slot runs at Gen 4 speeds. So you won't break anything by mixing generations — you'll just waste money if the drive can't use its full speed.
+            </p>
+            <p><strong>Quick tip:</strong> Newer platforms like AMD AM5 and recent Intel boards offer Gen 5 M.2 slots, but not every board in those families has one. Check your motherboard manual before buying.</p>
+        </article>
+
+    </section>
+
+    <section class="hl-article-section hl-article-components my-5">
+        <h2 class="section-heading">Does Gen 5 Actually Feel Faster?</h2>
+        <article class="hl-article-component">
+            <h3>Gaming: Almost No Difference</h3>
+            <p>
+                This is the big one. In real game testing, load times between a good PCIe 4.0 SSD and a PCIe 5.0 SSD are nearly identical — usually a second or two at most, and often much less. Modern games are limited by how the game engine processes data and decompresses assets, not by raw SSD bandwidth.
+            </p>
+            <p>
+                Even DirectStorage, which was supposed to make fast SSDs matter more, hasn't turned Gen 5 into a gaming upgrade yet. Once you're in a game, your frame rate is decided by your GPU and CPU, not your SSD.
+            </p>
+            <p><strong>Recommendation:</strong> If you mainly game, buy a fast PCIe 4.0 SSD and put the savings into your GPU.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Everyday Use: Boot Times, Apps, Browsing</h3>
+            <p>
+                Windows boot time, app launches, and web browsing show no perceptible difference between Gen 4 and Gen 5. Everyday tasks rely heavily on small random reads, and good Gen 4 drives already handle those extremely well.
+            </p>
+            <p>
+                This is why upgrading from a SATA SSD to a decent NVMe drive feels like a big step, but going from Gen 4 to Gen 5 usually feels like nothing.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Creative and Professional Work: Where Gen 5 Can Help</h3>
+            <p>
+                Gen 5 does make a real difference if you regularly move very large files, such as 100GB+ video projects between drives. Workloads like loading large AI models and processing big datasets can also benefit. In those cases the extra bandwidth saves actual time.
+            </p>
+            <p>
+                Even then, your other storage or network on the other end of the transfer can become the bottleneck, so check that the rest of your workflow can keep up.
+            </p>
+            <p><strong>Recommendation:</strong> Gen 5 makes sense for video editors, data scientists, and anyone working with huge files all day.</p>
+        </article>
+
+    </section>
+
+    <section class="hl-article-section hl-article-components my-5">
+        <h2 class="section-heading">The Downsides of Gen 5</h2>
+        <article class="hl-article-component">
+            <h3>1. Heat</h3>
+            <p>
+                Gen 5 SSDs run hot. Most models need a proper heatsink, and some need active cooling, or they'll throttle — slowing themselves down — during long transfers. Many motherboards include M.2 heatsinks, but a heatsink alone doesn't help if your case airflow is poor or a big GPU is sitting right above the slot.
+            </p>
+            <p>
+                A Gen 4 SSD with a basic heatsink generally stays cool and consistent.
+            </p>
+            <p><strong>Quick tip:</strong> A good heatsink or thermal pad can be the difference between full speed and frustrating slowdowns on a Gen 5 drive.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>2. Price</h3>
+            <p>
+                Gen 5 drives cost noticeably more than Gen 4 drives of the same capacity, and flash storage prices have also been under pressure from the same AI-driven demand that's pushing RAM prices up. Check live prices rather than trusting any number in an article, including this one.
+            </p>
+            <p>
+                A top Gen 4 drive typically delivers nearly all of the real-world performance at a much lower price.
+            </p>
+            <p><strong>Quick stat:</strong> In most tests, the best Gen 4 drives deliver around 98% of the real-world experience of Gen 5 at roughly half the price.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>3. Platform Requirements</h3>
+            <p>
+                To get Gen 5 speeds you need a CPU and motherboard that support them, and the specific M.2 slot you use has to be a Gen 5 slot. If you're on an older platform, you'd be paying for speed you can't use.
+            </p>
+        </article>
+
+    </section>
+
+    <section class="hl-article-section hl-article-components my-5">
+        <h2 class="section-heading">Which SSD Should You Buy?</h2>
+        <article class="hl-article-component">
+            <h3>Gamers and Everyday Users</h3>
+            <p>
+                Buy a high-quality PCIe 4.0 NVMe SSD. You'll get excellent performance, lower heat, and a much better price. A 2TB Gen 4 drive is a better purchase than a 1TB Gen 5 drive for almost everyone, because running out of space hurts more than a slightly slower drive.
+            </p>
+            <p><strong>Recommendation:</strong> Prioritise capacity and quality over generation.</p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Creators and Professionals</h3>
+            <p>
+                If you work with huge files daily and your motherboard has a Gen 5 slot, Gen 5 can be worth it — especially if the price gap is small. Make sure you have proper cooling for the drive.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Budget Builders</h3>
+            <p>
+                A reliable mid-range Gen 4 drive or even a good Gen 3 drive is plenty for most budget builds. Don't spend extra on speed you won't feel.
+            </p>
+        </article>
+
+    </section>
+
+    <section class="hl-article-section hl-article-checklist my-5">
+        <h3 style="margin-top: 1.5rem;">Buy PCIe 4.0 if:</h3>
+        <ul>
+            <li>✅ You mostly game, study, or browse</li>
+            <li>✅ You want the best value per dollar</li>
+            <li>✅ You'd rather spend the savings on a bigger drive or a better GPU</li>
+            <li>✅ You don't want to worry about heat and throttling</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Buy PCIe 5.0 if:</h3>
+        <ul>
+            <li>✅ You regularly move 100GB+ files</li>
+            <li>✅ Your motherboard has a Gen 5 M.2 slot</li>
+            <li>✅ You have a heatsink and decent case airflow for the drive</li>
+            <li>✅ The price gap over Gen 4 is small</li>
+        </ul>
+
+        <h3 style="margin-top: 2rem;">Common mistakes to avoid:</h3>
+        <ul>
+            <li>🔍 Choosing a drive based only on its peak sequential speed</li>
+            <li>🔍 Installing a Gen 5 drive without a heatsink</li>
+            <li>🔍 Buying a smaller Gen 5 drive instead of a larger Gen 4 drive</li>
+            <li>🔍 Putting a Gen 5 drive in a slot that only runs at Gen 4 speeds</li>
+        </ul>
+
+    </section>
+
+    <section class="hl-article-section hl-article-components my-5">
+        <h2 class="section-heading">Frequently Asked Questions</h2>
+        <article class="hl-article-component">
+            <h3>Is a PCIe 5.0 SSD worth it for gaming?</h3>
+            <p>
+                No. Game load times between a good PCIe 4.0 SSD and a PCIe 5.0 SSD are nearly identical, so Gen 5 gives no meaningful gaming advantage today.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Will a PCIe 5.0 SSD work in a PCIe 4.0 slot?</h3>
+            <p>
+                Yes, it will work, but it will run at PCIe 4.0 speeds.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Do PCIe 5.0 SSDs need a heatsink?</h3>
+            <p>
+                Almost always. Gen 5 drives run hot and can throttle without proper cooling, so a good heatsink is strongly recommended.
+            </p>
+        </article>
+
+        <article class="hl-article-component">
+            <h3>Should I buy a bigger Gen 4 SSD or a smaller Gen 5 SSD?</h3>
+            <p>
+                For almost everyone, the bigger Gen 4 drive is the better buy.
+            </p>
+        </article>
+
+    </section>
+
+    <!-- SUMMARY -->
+    <section class="hl-article-section hl-article-summary">
+        <p>
+            <strong>Bottom line:</strong> PCIe 5.0 SSDs are impressively fast on paper, but for gaming and everyday use you won't feel the difference over a good PCIe 4.0 drive — and you'll pay more and deal with extra heat. Gen 5 is a smart pick for creators and professionals moving huge files on a compatible board. For everyone else, buy a quality Gen 4 SSD in the biggest capacity you can afford.
+        </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="hl-article-section hl-article-cta">
+        <p>Not sure which motherboard slots your SSD can use? Start with the basics.</p>
+        <a href="motherboards-explained.html" class="hl-article-btn">👉 Read: Motherboards Explained — A Beginner's Guide</a>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4 mb-4">
+
+                <!-- Brand Section -->
+                <div class="col-lg-4 col-md-12">
+                    <div class="d-flex align-items-center mb-3">
+                        <img src="../Logo.png" alt="Hardware Decoded Logo" width="40" height="40" class="me-2">
+                        <h5 class="mb-0">Hardware Decoded</h5>
+                    </div>
+                    <p class="text-light opacity-75 mb-3">
+                        PC Components, Explained — With News That Matters
+                    </p>
+                    <p class="text-light opacity-75 small mb-0">
+                        hardwaredecoded@gmail.com
+                    </p>
+                </div>
+
+                <!-- Navigation (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Navigation</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../index.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Home</a></li>
+                                <li><a href="../blogs.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">All Blogs</a>
+                                </li>
+                                <li><a href="../about-us.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">About Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../contact.html"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Categories (spread out) -->
+                <div class="col-lg-4 col-md-6">
+                    <h6 class="mb-3 fw-semibold">Categories</h6>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=cpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">CPUs</a></li>
+                                <li><a href="../blogs.html?filter=gpus"
+                                        class="text-light opacity-75 text-decoration-none footer-link">GPUs</a></li>
+                                <li><a href="../blogs.html?filter=motherboards"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Motherboards</a>
+                                </li>
+                                <li><a href="../blogs.html?filter=explainers"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Explainers</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="../blogs.html?filter=storage-memory"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Storage &
+                                        Memory</a></li>
+                                <li><a href="../blogs.html?filter=power-cooling"
+                                        class="text-light opacity-75 text-decoration-none footer-link">Power &
+                                        Cooling</a></li>
+                                <li><a href="../blogs.html?filter=AI"
+                                        class="text-light opacity-75 text-decoration-none footer-link">AI</a></li>
+                                <li><a href="../blogs.html?filter=news"
+                                        class="text-light opacity-75 text-decoration-none footer-link">News</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Separator -->
+            <hr class="my-4 opacity-25">
+
+            <!-- Bottom Footer -->
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p class="mb-0 text-light opacity-75 small">
+                        &copy; <span id="current-year"></span> Hardware Decoded. All rights reserved.
+                        | Developed by <strong class="text-white">Yashas Chaudhry</strong>
+                    </p>
+                </div>
+                <div class="col-md-4 text-md-end mt-2 mt-md-0">
+                    <div class="d-flex flex-wrap gap-3 justify-content-md-end justify-content-start">
+                        <a href="../privacy-policy.html" class="text-primary text-decoration-none small">Privacy
+                            Policy</a>
+                        <a href="../terms-of-service.html" class="text-primary text-decoration-none small">Terms of
+                            Service</a>
+                        <button class="btn btn-link btn-sm text-light opacity-75 p-0 back-to-top" id="back-to-top">
+                            <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16" class="me-1">
+                                <path fill-rule="evenodd"
+                                    d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z" />
+                            </svg>
+                            Back to Top
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Auto year
+        document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
